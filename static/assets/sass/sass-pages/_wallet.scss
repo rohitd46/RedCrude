@@ -1,0 +1,111 @@
+.cover-notify-kyc-fields {
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 3vw !important;
+        li {
+            --equal-hight: 22px;
+            position: relative;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            gap: 3px;
+            width: 100px;
+            color: inherit;
+            &:not(:last-child) {
+                &::before {
+                    content: '';
+                    width: 253px;
+                    height: 2px;
+                    background: var(--primary-clr);
+                    position: absolute;
+                    top: 10px;
+                    right: -221px;
+                }
+            }
+            i {
+                width: var(--equal-hight);
+                height: var(--equal-hight);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--black-clr-1);
+                @include border-radius(50%);
+                background: var(--primary-clr);
+                font-size: 14px;
+                margin: auto
+            }
+        }
+    }
+}
+
+.cover-wallet-card {
+    .card {
+        border: none;
+        .card-body {
+            padding: 35px 20px;
+            h2 {
+                text-align: center;
+                position: relative;
+                color: white;
+                padding-block: 5px;
+                font-size: 26px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 30px;
+                    right: 30px;
+                    background: url('assets/images/Vector.svg') no-repeat center/cover;
+                    height: 100%;
+                    z-index: -1;
+                }
+            }
+            h4 {
+                text-align: center;
+            }
+            .wallet-list-items {
+                margin-block: 30px !important;
+                padding-left: 27px !important;
+                li {
+                    position: relative;
+                    color: inherit;
+                    &.disabled {
+                        color: #C6C6C6;
+                        i {
+                            background: #C6C6C6;
+                            color: gray;
+                        }
+                    }
+                    i {
+                        font-size: 11px;
+                        text-align: center;
+                        width: 15px;
+                        height: 15px;
+                        line-height: 15px;
+                        background: #219653;
+                        color: white;
+                        position: absolute;
+                        top: 50%;
+                        left: -23px;
+                        @include transform(translateY(-50%));
+                        @include border-radius(50%);
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+            ul {
+                li {
+                    a {
+                        width: 100%;
+                        justify-content: center;
+                        @include border-radius(50px);
+                    }
+                }
+            }
+        }
+    }
+}

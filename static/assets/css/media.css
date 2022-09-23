@@ -1,0 +1,80 @@
+@media screen and (min-width: 992px) {
+    .hover-item .nav-item ul {
+        position: absolute;
+        top: 100%;
+        width: 250px;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        background: #1e2434;
+        transform: translateY(50px);
+        transition: all 300ms ease-in-out;
+        -webkit-transition: all 300ms ease-in-out;
+        -moz-transition: all 300ms ease-in-out;
+        -ms-transition: all 300ms ease-in-out;
+        -o-transition: all 300ms ease-in-out;
+    }
+    .hover-item li:hover>ul {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+    }
+    .dropdown-menu {
+        display: initial !important;
+        opacity: 0;
+        visibility: hidden;
+        /* transition: .1s ease-in-out; */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        /* right: 0;
+        left: auto; */
+    }
+    .nav-item.dropdown:hover .dropdown-menu {
+        visibility: visible;
+        opacity: 1;
+    }
+    .nav-item.dropdown:hover .dropdown-menu.dropdown-menu-end {
+        right: 0;
+        left: auto;
+    }
+    .nav-item.dropdown:hover .dropdown-menu.dropdown-menu-start {
+        right: auto;
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .search-v2 input {
+        width: 100%;
+        min-width: auto;
+    }
+    .table> :not(caption)>*>* {
+        padding-inline: 30px;
+    }
+    .cover-signup .signup {
+        flex-wrap: wrap;
+        align-items: inherit;
+    }
+    .cover-signup {
+        height: 100%;
+        padding: 1rem;
+        display: grid;
+        place-content: stretch;
+    }
+    .cover-signup .signup .left-box {
+        position: relative;
+        flex-basis: 100%;
+        height: auto;
+        padding: 10rem 2rem;
+        text-align: center;
+    }
+    .cover-signup .signup .right-box {
+        height: auto;
+        flex-basis: 100%;
+        padding: 35px 20px;
+        background: white;
+    }
+}

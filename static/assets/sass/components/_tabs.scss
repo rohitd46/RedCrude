@@ -1,0 +1,116 @@
+// tabs v1
+.tabs-style-1 {
+    .tabs-links {
+        gap: 40px;
+        li {
+            button {
+                position: relative;
+                color: white;
+                opacity: 0.5;
+                padding: 0;
+                &:not(.active):hover {
+                    opacity: 1;
+                }
+                &.active {
+                    color: white;
+                    background: transparent;
+                    opacity: 1;
+                    &::before {
+                        content: '';
+                        width: 100%;
+                        height: 4px;
+                        background: var(--primary-clr);
+                        position: absolute;
+                        bottom: -16px;
+                        left: 0;
+                        border-radius: 4px 4px 0px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// tabs v2
+.tabs-style-2 {
+    .tabs-links {
+        ul {
+            gap: 10px;
+            li {
+                button {
+                    color: #3a3a3a;
+                    &:not(.active):hover {
+                        color: var(--primary-clr);
+                    }
+                    &.active {
+                        color: var(--primary-clr);
+                        background: rgba(var(--primary-rgb-clr), 0.2) !important;
+                    }
+                }
+            }
+        }
+    }
+    .tab-content {
+        padding: 20px 0;
+    }
+}
+
+// tabs v3
+.tabs-style-3 {
+    border: 2px solid var(--primary-clr);
+    @include border-radius(50px);
+    padding: 3px;
+    display: inline-block;
+    ul {
+        border: none;
+        li {
+            button {
+                color: #828282;
+                @include border-radius(50px !important);
+                padding: 10px 24px;
+                transition: initial !important;
+                font-weight: 600;
+                &.active {
+                    border: none;
+                    background-color: rgba(var(--primary-rgb-clr), 0.2) !important;
+                    color: var(--primary-clr) !important;
+                }
+                &:hover {
+                    background: transparent;
+                    color: initial;
+                    border-color: transparent !important;
+                }
+            }
+        }
+    }
+}
+
+// tabs v4
+.tabs-style-4 {
+    ul.nav-tabs {
+        li {
+            flex: 1;
+            &:not(:last-child) {
+                border-right: 1px solid var(--border-clr);
+            }
+            button {
+                padding: 10px 24px;
+                background: var(--gray-bg-1) !important;
+                color: var(--heading-clr);
+                white-space: nowrap;
+                width: 100%;
+                &:hover {
+                    border-color: var(--border-clr);
+                }
+                &.active {
+                    background: white !important;
+                }
+                // &:hover {
+                //     background: transparent;
+                //     color: initial;
+                //     border-color: transparent !important;
+                // }
+            }
+        }
+    }
+}

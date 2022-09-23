@@ -1,0 +1,662 @@
+@import "mixin";
+@import url(../../../vendor/css/fancybox/fancybox.css);
+:root {
+  --input-padding: 10px;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004) !important;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--body-clr);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  outline: none;
+}
+
+ul,
+ol {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+  transition: 0.1s;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+svg {
+  transition: 0.1s;
+}
+
+section {
+  padding: var(--section-padding);
+  position: relative;
+}
+
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+p {
+  color: var(--para-clr);
+  line-height: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+li,
+label {
+  color: var(--heading-clr);
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+i {
+  line-height: normal;
+}
+
+// form setting
+span {
+  font-size: inherit;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  min-height: 45px;
+}
+
+select {
+  cursor: pointer;
+}
+
+.select-box {
+  width: 100%;
+  @include border-radius(0.25rem);
+}
+
+.form-check-input {
+  &:checked {
+    background-color: var(--primary-clr);
+    border-color: var(--primary-clr);
+  }
+  &:focus {
+    border-color: var(--primary-clr);
+    box-shadow: none;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.1rem;
+}
+
+.form-control,
+.select-box {
+  padding: var(--input-padding);
+  background: white;
+  box-shadow: none;
+  border: 1px solid var(--border-clr);
+  &:focus {
+    color: #71748d;
+    background-color: #fff;
+    border-color: var(--primary-clr);
+    outline: 0;
+    box-shadow: none;
+    &::placeholder {
+      color: var(--primary-clr);
+    }
+    i {
+      color: var(--primary-clr);
+    }
+  }
+}
+
+// end form setting
+// table setting
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: var(--border-clr);
+}
+
+.table-hover > tbody > tr:hover > * {
+  --bs-table-accent-bg: var(--table-hover-clr);
+  color: var(--table-td-after-hover);
+}
+
+.table > :not(:first-child) {
+  border-top: none;
+}
+
+// end table setting
+// ################## START CARD AREA  ######################
+.card {
+  transition: background 0.3s ease;
+  @include border-radius(10px);
+  border: 0;
+}
+
+// ################## END CARD AREA  ######################
+.column-spacing {
+  [class*="col-"] > div {
+    margin: 10px;
+  }
+}
+
+.content-spacing * + * {
+  margin-top: 2rem !important;
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  @include transition(0.2s);
+}
+
+// increment text
+.increment-text,
+.buy-color {
+  color: #219653 !important;
+}
+
+// decrement text
+.decrement-text,
+.sell-color {
+  color: #eb5757 !important;
+}
+
+// tittle effect
+.title-effect {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  &:hover {
+    i,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span,
+    img {
+      @include transition(0.5s);
+      @include transform(translateZ(30px));
+    }
+  }
+}
+
+.hb-line {
+  width: 70px;
+  height: 5px;
+  background: var(--primary-clr);
+  display: block;
+  margin-block: 9px;
+  @include border-radius(50px);
+}
+
+// title setting
+.section-title {
+  font-size: var(--section-title);
+}
+
+.subtitle {
+  position: relative;
+  font-size: var(--subtitle);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.block-title {
+  font-size: var(--block-title);
+  font-weight: 600;
+}
+
+.entry-title {
+  font-size: var(--entry-title);
+  font-weight: 600;
+}
+
+.single-title {
+  font-size: var(--single-title);
+  font-weight: 600;
+}
+
+.cover-section-title {
+  p {
+    font-size: 18px;
+    color: var(--para-white-drk-mode);
+  }
+}
+
+// end title settings
+.disc-items {
+  li {
+    list-style: disc;
+    margin-left: 1.5rem;
+  }
+}
+
+.decimal-items {
+  li {
+    list-style: decimal;
+    margin-left: 1.5rem;
+  }
+}
+
+.z-index1 {
+  z-index: 1;
+}
+
+// start country
+.select2-container {
+  width: 100% !important;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  color: #444;
+  line-height: 23px;
+}
+
+.select2-container .select2-selection--single {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  height: 45px !important;
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 10px 2px;
+  width: 100%;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
+  transform: translateY(-50%);
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  height: 26px;
+  position: absolute;
+  top: 13px !important;
+  right: 1px;
+  width: 20px;
+}
+
+.select2-container--default
+  .select2-results__option--highlighted[aria-selected] {
+  background-color: var(--primary-clr);
+  color: white;
+}
+
+.select2-container--default .select2-selection--single {
+  background-color: var(--card-clr);
+  border: 1px solid #c6c6c6;
+  border-radius: 4px;
+}
+
+// updonw animate width scale
+.updown-animate-w-s {
+  animation: updownanimatewithscale calc(var(--i) * 10s) linear infinite;
+  @keyframes updownanimatewithscale {
+    0% {
+      @include transform(translateY(0) scale(0.8));
+    }
+    50% {
+      @include transform(translateY(-5px) scale(1.04));
+    }
+    100% {
+      @include transform(translateY(0px) scale(0.8));
+    }
+  }
+}
+
+// updonw animate
+.updown-animate {
+  animation: updownanimate 10s linear infinite;
+  @keyframes updownanimate {
+    0% {
+      @include transform(translateY(0));
+    }
+    50% {
+      @include transform(translateY(-5px));
+    }
+    100% {
+      @include transform(translateY(0px));
+    }
+  }
+}
+
+// shadow dots animate
+//   dark color loop
+@for $dark-bg-color from 1 through 9 {
+  .dark-bg-clr-0#{$dark-bg-color} {
+    background-color: #{"rgba(0,0,0,0.#{$dark-bg-color})"};
+  }
+}
+
+//   primary color loop
+@for $primary-bg-color from 1 through 9 {
+  .primary-bg-clr-0#{$primary-bg-color} {
+    background-color: rgba(var(--primary-rgb-clr), #{"0.#{$primary-bg-color}"});
+  }
+}
+
+//   secondary color loop
+@for $secondary-bg-color from 1 through 9 {
+  .secondary-bg-clr-0#{$secondary-bg-color} {
+    background-color: rgba(
+      var(--secondary-rgb-clr),
+      #{"0.#{$secondary-bg-color}"}
+    );
+  }
+}
+
+// flex
+@for $i from 1 through 10 {
+  .flex-#{$i} {
+    flex: $i;
+  }
+}
+
+// border
+$borders: (
+  "top": #{var(--border-clr)},
+  "right": #{var(--border-clr)},
+  "bottom": #{var(--border-clr)},
+  "left": #{var(--border-clr)},
+);
+@each $keys, $val in $borders {
+  .border-#{$keys} {
+    border-#{$keys}: 1px solid $val !important;
+  }
+}
+
+.border {
+  border: 1px solid var(--border-clr) !important;
+}
+
+@for $i from 0 through 15 {
+  .padding-inline-#{$i}vw {
+    padding-inline: $i + vw;
+  }
+}
+
+@for $i from 0 through 15 {
+  .padding-block-#{$i}vw {
+    padding-block: $i + vw;
+  }
+}
+
+/*############################3
+      opacity
+ #########################3*/
+
+.opacity-1 {
+  opacity: 1;
+}
+
+@for $i from 1 through 9 {
+  .opacity-0#{$i} {
+    opacity: #{"0.#{$i}"};
+  }
+}
+
+/*############################3
+      opacity
+ #########################3*/
+
+/*############################3
+      Start font weight
+ #########################3*/
+
+@for $i from 1 through 9 {
+  .font-weight-#{$i}00 {
+    font-weight: $i +#{"00"};
+  }
+}
+
+/*############################3
+      End font weight
+ #########################3*/
+
+/*############################3
+      Start border-radius
+ #########################3*/
+
+@for $i from 0 through 50 {
+  .border-radius-#{$i}px {
+    border-radius: $i +#{"px"};
+  }
+}
+
+/*############################3
+      End border-radius
+ #########################3*/
+
+$while-width: 5;
+@while $while-width <=100 {
+  .width-#{$while-width} {
+    width: $while-width +#{"%"};
+  }
+  $while-width: $while-width + 5;
+}
+
+$while-height: 10;
+@while $while-height <=100 {
+  .height-#{$while-height}vh {
+    height: $while-height + vh;
+  }
+  $while-height: $while-height + 10;
+}
+
+$while-height2: 10;
+@while $while-height2 <=400 {
+  .height-#{$while-height2}px {
+    height: $while-height2 + px;
+  }
+  $while-height2: $while-height2 + 5;
+}
+
+@for $i from 10 through 100 {
+  .font-#{$i}px {
+    font-size: $i + px;
+  }
+}
+
+// sm
+@media screen and (min-width: 576px) {
+  $while-width: 5;
+  @while $while-width <=100 {
+    .width-sm-#{$while-width} {
+      width: $while-width +#{"%"};
+    }
+    $while-width: $while-width + 5;
+  }
+  $while-height: 10;
+  @while $while-height <=100 {
+    .height-sm-#{$while-height}vh {
+      height: $while-height + vh;
+    }
+    $while-height: $while-height + 10;
+  }
+  $while-height2: 10;
+  @while $while-height2 <=400 {
+    .height-sm-#{$while-height2}px {
+      height: $while-height2 + px;
+    }
+    $while-height2: $while-height2 + 5;
+  }
+  @for $i from 10 through 100 {
+    .font-sm-#{$i}px {
+      font-size: $i + px;
+    }
+  }
+  @for $i from 0 through 15 {
+    .padding-inline-sm-#{$i}vw {
+      padding-inline: $i + vw;
+    }
+  }
+  @for $i from 0 through 15 {
+    .padding-block-sm-#{$i}vw {
+      padding-block: $i + vw;
+    }
+  }
+}
+
+// md
+@media screen and (min-width: 768px) {
+  $while-width: 5;
+  @while $while-width <=100 {
+    .width-md-#{$while-width} {
+      width: $while-width +#{"%"};
+    }
+    $while-width: $while-width + 5;
+  }
+  $while-height: 10;
+  @while $while-height <=100 {
+    .height-md-#{$while-height}vh {
+      height: $while-height + vh;
+    }
+    $while-height: $while-height + 10;
+  }
+  $while-height2: 10;
+  @while $while-height2 <=400 {
+    .height-md-#{$while-height2}px {
+      height: $while-height2 + px;
+    }
+    $while-height2: $while-height2 + 5;
+  }
+  @for $i from 10 through 100 {
+    .font-md-#{$i}px {
+      font-size: $i + px;
+    }
+  }
+  @for $i from 0 through 15 {
+    .padding-inline-md-#{$i}vw {
+      padding-inline: $i + vw;
+    }
+  }
+  @for $i from 0 through 15 {
+    .padding-block-md-#{$i}vw {
+      padding-block: $i + vw;
+    }
+  }
+}
+
+// lg
+@media screen and (min-width: 992px) {
+  $while-width: 5;
+  @while $while-width <=100 {
+    .width-lg-#{$while-width} {
+      width: $while-width +#{"%"};
+    }
+    $while-width: $while-width + 5;
+  }
+  $while-height: 10;
+  @while $while-height <=100 {
+    .height-lg-#{$while-height}vh {
+      height: $while-height + vh;
+    }
+    $while-height: $while-height + 10;
+  }
+  $while-height2: 10;
+  @while $while-height2 <=400 {
+    .height-lg-#{$while-height2}px {
+      height: $while-height2 + px;
+    }
+    $while-height2: $while-height2 + 5;
+  }
+  @for $i from 10 through 100 {
+    .font-lg-#{$i}px {
+      font-size: $i + px;
+    }
+  }
+  @for $i from 0 through 15 {
+    .padding-inline-lg-#{$i}vw {
+      padding-inline: $i + vw;
+    }
+  }
+  @for $i from 0 through 15 {
+    .padding-block-lg-#{$i}vw {
+      padding-block: $i + vw;
+    }
+  }
+}
+
+// xl
+@media screen and (min-width: 1200px) {
+  $while-width: 5;
+  @while $while-width <=100 {
+    .width-xl-#{$while-width} {
+      width: $while-width +#{"%"};
+    }
+    $while-width: $while-width + 5;
+  }
+  $while-height: 10;
+  @while $while-height <=100 {
+    .height-xl-#{$while-height}vh {
+      height: $while-height + vh;
+    }
+    $while-height: $while-height + 10;
+  }
+  $while-height2: 10;
+  @while $while-height2 <=400 {
+    .height-xl-#{$while-height2}px {
+      height: $while-height2 + px;
+    }
+    $while-height2: $while-height2 + 5;
+  }
+  @for $i from 10 through 100 {
+    .font-xl-#{$i}px {
+      font-size: $i + px;
+    }
+  }
+  @for $i from 0 through 15 {
+    .padding-inline-xl-#{$i}vw {
+      padding-inline: $i + vw;
+    }
+  }
+  @for $i from 0 through 15 {
+    .padding-block-xl-#{$i}vw {
+      padding-block: $i + vw;
+    }
+  }
+}

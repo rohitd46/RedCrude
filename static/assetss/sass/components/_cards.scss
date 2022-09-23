@@ -1,0 +1,112 @@
+
+
+
+
+
+// start teacher card
+.cover-teacher-card {
+    padding: 25px;
+    background: white;
+    @include border-radius(10px);
+    text-align: center;
+    border: 1px solid #E6EBF1;
+    .cover-img {
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            @include border-radius(50%);
+            margin-bottom: 10px;
+        }
+    }
+    h4 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 15px;
+        margin: 0;
+    }
+    i {
+        font-size: 20px;
+        line-height: inherit;
+    }
+    ul {
+        li {
+            a {
+                padding-block: 8px;
+                &:hover {
+                    padding-inline: 25px;
+                }
+            }
+        }
+    }
+}
+
+// end teacher card
+// course cards
+.cover-card-products {
+    border: 1px solid #E6EBF1;
+    @include border-radius(10px);
+    padding: 12px 12px 14px;
+    background: white;
+    &:hover {
+        .cover-img {
+            opacity: 1.1;
+            img {
+                @include transform(scale(1.1));
+            }
+        }
+    }
+    .cover-img {
+        overflow: hidden;
+        @include border-radius(5px);
+        margin-bottom: 10px;
+        img {
+            width: 100%;
+            height: 145px;
+            object-fit: cover;
+            @include transition(.5s);
+        }
+    }
+    ul {
+        li {
+            a {
+                color: var(--black-clr-1);
+                font-size: 17px;
+                font-weight: 500;
+                margin-bottom: 6px !important;
+                display: inline-block;
+                line-height: 23px;
+                &:hover {
+                    color: var(--secondary-clr);
+                }
+            }
+        }
+    }
+    h6 {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: inherit;
+        margin-bottom: 10px;
+    }
+}
+
+.product-star-rating {
+    i {
+        color: #F9C81B;
+        font-size: 20px;
+    }
+    p {
+        line-height: inherit;
+        color: #4F4F4F;
+        font-size: 14px;
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+}
+// end course cards

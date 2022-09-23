@@ -1,0 +1,152 @@
+.cover-lectures {
+    .card {
+        height: 100%;
+        border: 0;
+    }
+    .card-header {
+        color: black;
+        font-weight: 500;
+        padding: 20px;
+        font-size: 18px;
+        background: transparent;
+    }
+    ul {
+        border: 0;
+        height: 430px;
+        overflow-y: auto;
+        li {
+            padding-inline: 20px;
+            &:not(:last-child) {
+                margin-bottom: 2px;
+            }
+            a {
+                border: 0;
+                padding: 18px 20px;
+                @include border-radius(5px !important);
+                opacity: 0.2;
+                user-select: none;
+                cursor: default;
+                pointer-events: none;
+                i {
+                    margin-right: 1.1rem;
+                }
+                &:hover {
+                    background: transparent;
+                }
+                &.active-lecture {
+                    color: inherit;
+                    opacity: 1;
+                    cursor: pointer;
+                    background: rgba(var(--primary-rgb-clr), 0.08);
+                    pointer-events: inherit;
+                }
+                p {
+                    margin: 0;
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.list-group-numbered {
+    list-style-type: none;
+    counter-reset: section;
+    >li a::before {
+        // Increments only this instance of the section counter
+        content: counters(section, ".") ". ";
+        counter-increment: section;
+        position: absolute;
+        top: 50%;
+        left: 53px;
+        @include transform(translateY(-50%));
+    }
+}
+
+.list-group-numbered {
+    list-style-type: none;
+    counter-reset: section;
+    >li::before {
+        // Increments only this instance of the section counter
+        content: '';
+        counter-increment: initial;
+        display: none;
+    }
+}
+
+.cover-video-banner {
+    background: rgba(0, 0, 0, 0.6) url(assets/images/blog/1.jpg) no-repeat center/cover;
+    width: 100%;
+    height: calc(430px + 67px);
+    position: relative;
+    background-blend-mode: multiply;
+}
+
+.video-play-button {
+    color: #1cb9c8;
+    font-size: 30px;
+    left: 50%;
+    padding-left: 7px;
+    position: absolute;
+    top: 50%;
+    @include transform(translate(-50%, -50%));
+    z-index: 1;
+    i {
+        display: block;
+        position: relative;
+        z-index: 3;
+        color: var(--primary-clr);
+        font-size: 40px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        left: 50%;
+        top: 50%;
+        @include transform(translate(-50%, -50%));
+        display: block;
+        width: 80px;
+        height: 80px;
+        background: #fff repeat scroll 0 0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-animation: pulse-border 1.5s ease-out infinite;
+        animation: pulse-border 1.5s ease-out infinite;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        @include transform(translate(-50%, -50%));
+        display: block;
+        width: 80px;
+        height: 80px;
+        background: #fff repeat scroll 0 0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        transition: all .2s;
+        -webkit-transition: all .2s;
+        -moz-transition: all .2s;
+        -ms-transition: all .2s;
+        -o-transition: all .2s;
+    }
+}
+
+@keyframes pulse-border {
+    0% {
+        -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1
+    }
+    100% {
+        -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0
+    }
+}

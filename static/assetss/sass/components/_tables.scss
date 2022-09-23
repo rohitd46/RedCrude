@@ -1,0 +1,148 @@
+// start datatable
+.cover-datatable {
+    #onlydatatable {
+        margin-top: 10px !important;
+    }
+    .dataTables_filter {
+        visibility: hidden;
+    }
+    .cover-tab-title {
+        position: absolute;
+    }
+    table {
+        width: 100% !important;
+        border-spacing: 0 1px;
+        margin-top: 20px !important;
+        margin-bottom: 3rem !important;
+        box-shadow: 0px 0px 3px 0px #EEEEEE;
+        background: #eee;
+        .sorting {
+            &::before,
+            &::after {
+                top: 50%;
+                transform: translateY(-72%);
+            }
+        }
+        thead {
+            tr {
+                background: white;
+                th {
+                    border: none !important;
+                    font-weight: 500;
+                    padding: 20px;
+                    font-size: 14px;
+                    white-space: nowrap;
+                    vertical-align: top;
+                    span {
+                        color: #767B89;
+                        font-size: 13px;
+                        display: block;
+                        white-space: nowrap;
+                    }
+                    &:nth-child(1) {
+                        width: 100px !important;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                background: white;
+                td {
+                    border: none;
+                    padding-left: 20px;
+                    padding-block: 17px;
+                    .cover-img-to-content .img-to-content h5 a {
+                        font-weight: 400;
+                    }
+                    .cover-table-btn {
+                        li {
+                            a {
+                                i {
+                                    color: #777777;
+                                }
+                            }
+                        }
+                        .dropdown-menu {
+                            border: none;
+                            padding: 10px 20px !important;
+                            box-shadow: 0px 0px 32px 0px #EEEEEE;
+                            @include border-radius(5px);
+                            li {
+                                a {
+                                    padding-left: 0;
+                                    padding-right: 0;
+                                    font-size: 15px;
+                                    &:hover {
+                                        background: transparent;
+                                        color: var(--primary-clr);
+                                        margin-left: 3px;
+                                    }
+                                    &.delete {
+                                        color: #E20000;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .cover-img-to-content {
+                        margin-top: 0;
+                    }
+                    &.banner-image {
+                        img {
+                            width: 200px;
+                        }
+                    }
+                    span {
+                        color: #767B89;
+                        font-size: 13px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+    width: 80px;
+    display: inline-block;
+    padding: 10px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border: 1px solid #EEEEEE;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: .5em;
+    display: inline-block;
+    width: auto;
+    padding: 10px;
+    border: 1px solid #EEEEEE;
+}
+
+ul.pagination {
+    li a {
+        padding: 12px 20px;
+    }
+    .page-item {
+        &.active .page-link {
+            z-index: 3;
+            color: #fff;
+            background-color: var(--primary-clr);
+            border-color: var(--primary-clr);
+        }
+        &:first-child a {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            color: #B7B7B7;
+        }
+        &:last-child a {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            color: #B7B7B7;
+        }
+    }
+}
+
+// End data table

@@ -1,0 +1,571 @@
+{%include 'indexinclude/sidebar.html'%}
+{%include 'indexinclude/topnav.html'%}
+{%load static%}
+
+<div class="cover-all-content">
+    <div class="page-title d-flex align-items-center justify-content-between flex-wrap">
+        <h2>Dashboard</h2>
+    </div>
+    <div class="cover-inner-content">
+        <div class="notify-alert d-flex align-items-center justify-content-between p-3">
+            <div class="d-flex align-items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M15.0001 0.499023C11.121 3.9799 6.11037 5.93453 0.898897 5.99982C0.700897 7.16802 0.600098 8.37402 0.600098 9.59982C0.600098 19.0048 6.6121 27.0058 15.0001 29.9704C23.3881 27.0058 29.4001 19.0048 29.4001 9.59982C29.4001 8.37222 29.2975 7.16982 29.1013 5.99802C23.89 5.93323 18.8794 3.97925 15.0001 0.499023ZM16.8001 22.1998C16.8001 22.6772 16.6105 23.135 16.2729 23.4726C15.9353 23.8102 15.4775 23.9998 15.0001 23.9998C14.5227 23.9998 14.0649 23.8102 13.7273 23.4726C13.3897 23.135 13.2001 22.6772 13.2001 22.1998C13.2001 21.7224 13.3897 21.2646 13.7273 20.927C14.0649 20.5895 14.5227 20.3998 15.0001 20.3998C15.4775 20.3998 15.9353 20.5895 16.2729 20.927C16.6105 21.2646 16.8001 21.7224 16.8001 22.1998ZM16.8001 9.59982C16.8001 9.12243 16.6105 8.6646 16.2729 8.32703C15.9353 7.98947 15.4775 7.79982 15.0001 7.79982C14.5227 7.79982 14.0649 7.98947 13.7273 8.32703C13.3897 8.6646 13.2001 9.12243 13.2001 9.59982V14.9998C13.2001 15.4772 13.3897 15.935 13.7273 16.2726C14.0649 16.6102 14.5227 16.7998 15.0001 16.7998C15.4775 16.7998 15.9353 16.6102 16.2729 16.2726C16.6105 15.935 16.8001 15.4772 16.8001 14.9998V9.59982Z" />
+                </svg>
+                <p>Your profile is not completed yet</p>
+            </div>
+            <ul>
+                <li><a href="#" class="primary-btn border-danger bg-danger">Update Profile</a></li>
+            </ul>
+        </div>
+        <div class="card primary-bg-clr-02 overflow-hidden">
+            <span class="lg-circle-shap"></span>
+            <span class="sm-circle-shap1"></span>
+            <div class="card-body">
+                <div class="row align-items-center gy-4 gy-md-0">
+                    <div class="col-md-6">
+                        <div class="user-area d-flex align-items-center gap-2">
+                            <img src="{%static 'assetss/images/admin2.png'%}" alt="">
+                            <div>
+                                {%if user.is_authenticated%}
+                                <h3 class="primary-text m-0">{{user.first_name}}</h3>
+                                {% endif %}
+                                <p>Welcome Back!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text-end">
+                            <ul>
+                                <li>
+                                    <div class="d-inline-block text-center">
+                                        <h6>PRO+</h6>
+                                        <h5 class="font-weight-600 primary-text">$30.00/ <sub
+                                                class="font-weight-400">monthly</sub> </h5>
+                                        <a href="#" class="gradient-btn extra-btn-padding-40 border-radius-50px">Get
+                                            Started</a>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <h4 class="m-0">Courses</h4>
+            <ul>
+                <li><a href="javascript:void(0)" class="primary-anchor d-inline-flex align-items-center">More Courses <i
+                            class="material-icons">
+                            chevron_right
+                        </i></a></li>
+            </ul>
+        </div>
+        <div class="row g-3">
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-card-products">
+                    <div class="cover-img position-relative">
+                        <img src="{%static 'assetss/images/blog/1.jpg'%}" alt="image" draggable="false">
+                        <div class="whislist-overlay-icon">
+                            <ul>
+                                <li><a href="#"><i class="material-icons">
+                                            favorite_border
+                                        </i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#.">Candles Visualaization</a></li>
+                    </ul>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <small>Category</small>
+                            <p class="m-0">Common Stocks</p>
+                        </div>
+                        <div>
+                            <small>Duration</small>
+                            <p>174 hr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-card-products">
+                    <div class="cover-img position-relative">
+                        <img src="{%static 'assetss/images/blog/1.jpg'%}" alt="image" draggable="false">
+                        <div class="whislist-overlay-icon">
+                            <ul>
+                                <li><a href="#"><i class="material-icons">
+                                            favorite_border
+                                        </i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#.">Candles Visualaization</a></li>
+                    </ul>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <small>Category</small>
+                            <p class="m-0">Common Stocks</p>
+                        </div>
+                        <div>
+                            <small>Duration</small>
+                            <p>174 hr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-card-products">
+                    <div class="cover-img position-relative">
+                        <img src="{%static 'assetss/images/blog/1.jpg'%}" alt="image" draggable="false">
+                        <div class="whislist-overlay-icon">
+                            <ul>
+                                <li><a href="#"><i class="material-icons">
+                                            favorite_border
+                                        </i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#.">Candles Visualaization</a></li>
+                    </ul>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <small>Category</small>
+                            <p class="m-0">Common Stocks</p>
+                        </div>
+                        <div>
+                            <small>Duration</small>
+                            <p>174 hr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-card-products">
+                    <div class="cover-img position-relative">
+                        <img src="{%static 'assetss/images/blog/1.jpg'%}" alt="image" draggable="false">
+                        <div class="whislist-overlay-icon">
+                            <ul>
+                                <li><a href="#"><i class="material-icons">
+                                            favorite_border
+                                        </i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#.">Candles Visualaization</a></li>
+                    </ul>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <small>Category</small>
+                            <p class="m-0">Common Stocks</p>
+                        </div>
+                        <div>
+                            <small>Duration</small>
+                            <p>174 hr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-card-products">
+                    <div class="cover-img position-relative">
+                        <img src="{%static 'assetss/images/blog/1.jpg'%}" alt="image" draggable="false">
+                        <div class="whislist-overlay-icon">
+                            <ul>
+                                <li><a href="#"><i class="material-icons">
+                                            favorite_border
+                                        </i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#.">Candles Visualaization</a></li>
+                    </ul>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <small>Category</small>
+                            <p class="m-0">Common Stocks</p>
+                        </div>
+                        <div>
+                            <small>Duration</small>
+                            <p>174 hr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-card-products">
+                    <div class="cover-img position-relative">
+                        <img src="{%static 'assetss/images/blog/1.jpg'%}" alt="image" draggable="false">
+                        <div class="whislist-overlay-icon">
+                            <ul>
+                                <li><a href="#"><i class="material-icons">
+                                            favorite_border
+                                        </i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#.">Candles Visualaization</a></li>
+                    </ul>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <small>Category</small>
+                            <p class="m-0">Common Stocks</p>
+                        </div>
+                        <div>
+                            <small>Duration</small>
+                            <p>174 hr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-card-products">
+                    <div class="cover-img position-relative">
+                        <img src="{%static 'assetss/images/blog/1.jpg'%}" alt="image" draggable="false">
+                        <div class="whislist-overlay-icon">
+                            <ul>
+                                <li><a href="#"><i class="material-icons">
+                                            favorite_border
+                                        </i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#.">Candles Visualaization</a></li>
+                    </ul>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <small>Category</small>
+                            <p class="m-0">Common Stocks</p>
+                        </div>
+                        <div>
+                            <small>Duration</small>
+                            <p>174 hr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-card-products">
+                    <div class="cover-img position-relative">
+                        <img src="{%static 'assetss/images/blog/1.jpg'%}" alt="image" draggable="false">
+                        <div class="whislist-overlay-icon">
+                            <ul>
+                                <li><a href="#"><i class="material-icons">
+                                            favorite_border
+                                        </i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#.">Candles Visualaization</a></li>
+                    </ul>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting </p>
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <small>Category</small>
+                            <p class="m-0">Common Stocks</p>
+                        </div>
+                        <div>
+                            <small>Duration</small>
+                            <p>174 hr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <h4 class="m-0">Teachers</h4>
+            <ul>
+                <li><a href="javascript:void(0)" class="primary-anchor d-inline-flex align-items-center">More Expert
+                        Teacher <i class="material-icons">
+                            chevron_right
+                        </i></a></li>
+            </ul>
+        </div>
+        <div class="row g-3">
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-teacher-card">
+                    <div class="cover-img">
+                        <img src="{%static 'assetss/images/teacher/1.png'%}" alt="">
+                    </div>
+                    <h4>Joseph J Silva</h4>
+                    <p class="text-muted">Business, Physics</p>
+                    <ul class="star-rating-clr d-flex align-items-center justify-content-center gap-1 my-2">
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons disabled-star">
+                                star
+                            </i></li>
+                        <li class="ms-2">4.3</li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="light-gray-btn border-radius-50px font-weight-500"><i
+                                    class="bi bi-eye"></i> View Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-teacher-card">
+                    <div class="cover-img">
+                        <img src="{%static 'assetss/images/teacher/1.png'%}" alt="">
+                    </div>
+                    <h4>Joseph J Silva</h4>
+                    <p class="text-muted">Business, Physics</p>
+                    <ul class="star-rating-clr d-flex align-items-center justify-content-center gap-1 my-2">
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons disabled-star">
+                                star
+                            </i></li>
+                        <li class="ms-2">4.3</li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="light-gray-btn border-radius-50px font-weight-500"><i
+                                    class="bi bi-eye"></i> View Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-teacher-card">
+                    <div class="cover-img">
+                        <img src="{%static 'assetss/images/teacher/1.png'%}" alt="">
+                    </div>
+                    <h4>Joseph J Silva</h4>
+                    <p class="text-muted">Business, Physics</p>
+                    <ul class="star-rating-clr d-flex align-items-center justify-content-center gap-1 my-2">
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons disabled-star">
+                                star
+                            </i></li>
+                        <li class="ms-2">4.3</li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="light-gray-btn border-radius-50px font-weight-500"><i
+                                    class="bi bi-eye"></i> View Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-teacher-card">
+                    <div class="cover-img">
+                        <img src="{%static 'assets/images/teacher/1.png'%}" alt="">
+                    </div>
+                    <h4>Joseph J Silva</h4>
+                    <p class="text-muted">Business, Physics</p>
+                    <ul class="star-rating-clr d-flex align-items-center justify-content-center gap-1 my-2">
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons disabled-star">
+                                star
+                            </i></li>
+                        <li class="ms-2">4.3</li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="light-gray-btn border-radius-50px font-weight-500"><i
+                                    class="bi bi-eye"></i> View Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+           
+        </div>
+        <br>
+        <br>
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <h4 class="m-0">Traders</h4>
+            <ul>
+                <li><a href="javascript:void(0)" class="primary-anchor d-inline-flex align-items-center">More Expert Traders <i class="material-icons">
+                            chevron_right
+                        </i></a></li>
+            </ul>
+        </div>
+        <div class="row g-3">
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-teacher-card">
+                    <div class="cover-img">
+                        <img src="{%static 'assetss/images/teacher/1.png'%}" alt="">
+                    </div>
+                    <h4>Joseph J Silva</h4>
+                    <p class="text-muted">Business, Physics</p>
+                    <ul class="star-rating-clr d-flex align-items-center justify-content-center gap-1 my-2">
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons disabled-star">
+                                star
+                            </i></li>
+                        <li class="ms-2">4.3</li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="light-gray-btn border-radius-50px font-weight-500"><i
+                                    class="bi bi-eye"></i> View Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-teacher-card">
+                    <div class="cover-img">
+                        <img src="{%static 'assetss/images/teacher/1.png'%}" alt="">
+                    </div>
+                    <h4>Joseph J Silva</h4>
+                    <p class="text-muted">Business, Physics</p>
+                    <ul class="star-rating-clr d-flex align-items-center justify-content-center gap-1 my-2">
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons disabled-star">
+                                star
+                            </i></li>
+                        <li class="ms-2">4.3</li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="light-gray-btn border-radius-50px font-weight-500"><i
+                                    class="bi bi-eye"></i> View Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-teacher-card">
+                    <div class="cover-img">
+                        <img src="{%static 'assetss/images/teacher/1.png'%}" alt="">
+                    </div>
+                    <h4>Joseph J Silva</h4>
+                    <p class="text-muted">Business, Physics</p>
+                    <ul class="star-rating-clr d-flex align-items-center justify-content-center gap-1 my-2">
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons disabled-star">
+                                star
+                            </i></li>
+                        <li class="ms-2">4.3</li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="light-gray-btn border-radius-50px font-weight-500"><i
+                                    class="bi bi-eye"></i> View Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xl-3">
+                <div class="cover-teacher-card">
+                    <div class="cover-img">
+                        <img src="{%static 'assetss/images/teacher/1.png'%}" alt="">
+                    </div>
+                    <h4>Joseph J Silva</h4>
+                    <p class="text-muted">Business, Physics</p>
+                    <ul class="star-rating-clr d-flex align-items-center justify-content-center gap-1 my-2">
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons">
+                                star
+                            </i></li>
+                        <li><i class="material-icons disabled-star">
+                                star
+                            </i></li>
+                        <li class="ms-2">4.3</li>
+                    </ul>
+                    <ul>
+                        <li><a href="#" class="light-gray-btn border-radius-50px font-weight-500"><i
+                                    class="bi bi-eye"></i> View Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+           
+        </div>
+
+    </div>
+
+    {%include 'indexinclude/footer.html'%}

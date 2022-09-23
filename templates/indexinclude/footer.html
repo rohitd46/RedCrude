@@ -1,0 +1,58 @@
+{%load static %}
+</main>
+</div>
+</div>
+
+<!-- end side bar -->
+
+<!-- bootstrap js file -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+<script src="{%static 'vendors/js/fancybox/fancybox.umd.js'%}"></script>  
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.full.min.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="{%static 'vendors/js/ekeditor/ckeditor.js'%}"></script>
+<script src="{%static 'assetss/js/main.js'%} "></script>
+
+<script>
+function goBack() {
+    window.history.back();
+};
+$(document).ready(function() {
+    $('.js-example-basic-multiple1').select2();
+    $('.js-example-basic-multiple2').select2();
+    $('.js-example-basic-multiple3').select2();
+});
+Fancybox.bind("[data-fancybox]", {
+  // Your options go here
+});
+// $('.date').datepicker({
+//     startDate: "now",
+//     format: 'mm/dd/yyyy',
+//     inline: true,
+//     todayHighlight: true,
+// });
+// $(".shop-name").select2({
+//     placeholder: "Select Shop Name",
+//     allowClear: true
+// });
+// $(".sales-man-name").select2({
+//     placeholder: "Select Sales Man",
+//     allowClear: true
+// });
+// $(".products").select2({
+//     placeholder: "Select Products",
+//     allowClear: true
+// });
+</script>
+
+
+</body>
+
+</html>

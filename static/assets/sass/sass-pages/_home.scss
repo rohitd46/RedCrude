@@ -1,0 +1,114 @@
+.bg-hero {
+    background: url(assets/images/hero-bg.jpg) no-repeat center/cover;
+    height: 100vh;
+    h1 {
+        font-size: 48px;
+    }
+    p {
+        color: white;
+        font-size: 18px;
+    }
+}
+
+//####################
+// Start market cap section
+// #####################
+.bg-market-cap {
+    .box {
+        margin: 9px;
+        box-shadow: 3px 4px 6px 0px #1F1F1F33, -13.5px 13.5px 13.5px 0px #FFFFFF25 inset, 13.5px -13.5px 13.5px 0px #BEBEBE25 inset;
+        padding: 10px;
+        @include border-radius(10px);
+        background: rgba(250, 250, 250, 0.145);
+        backdrop-filter: blur(10px);
+        flex: 1;
+        padding: 25px;
+        h6 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            span {
+                margin-left: 5px;
+            }
+        }
+        p {
+            line-height: 14px;
+            margin-bottom: 0;
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }
+}
+
+//####################
+// END market cap section
+// #####################
+//####################
+// start demo section
+// #####################
+.forground-color {
+    background: #0B0E11;
+}
+
+//####################
+// END demo section
+// #####################
+//####################
+// start get in touch section
+// #####################
+.cover-earth {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    & img:nth-child(1) {
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        animation: layer1 calc(6s * 8) linear infinite;
+        @keyframes layer1 {
+            0% {
+                @include transform(translate(-50%, -50%) rotate(0deg));
+            }
+            // 50% {
+            //     @include transform(translate(-50%, -50%) rotate(-360deg));
+            // }
+            100% {
+                @include transform(translate(-50%, -50%) rotate(-360deg));
+            }
+        }
+    }
+    & img:nth-child(2) {
+        width: 67%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+    }
+    & div:nth-child(3) {
+        background: url(assets/images/new-world.png);
+        background-size: cover;
+        width: 45%;
+        height: 282px;
+        position: absolute;
+        top: 49.3%;
+        left: 50%;
+        box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.85);
+        @include transform(translate(-50%, -50%));
+        @include border-radius(50%);
+        animation: movearth 80s linear infinite;
+        @keyframes movearth {
+            0% {
+                background-position: 0 0
+            }
+            100% {
+                background-position: 1241px 0
+            }
+        }
+    }
+}
+
+//####################
+// END get in touch section
+// #####################

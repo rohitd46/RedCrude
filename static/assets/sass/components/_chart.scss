@@ -1,0 +1,69 @@
+.chartv1 {
+    ul {
+        li {
+            font-size: 15px;
+        }
+    }
+}
+
+.Stocks-analiyes {
+    // margin-top: 30px !important;
+    li {
+        @include flex-center();
+        padding-block: 0.7rem;
+        padding-inline: 0.8rem;
+        position: relative;
+        &:hover {
+            @include border-radius(10px);
+            background: var(--blue-hover-clr);
+        }
+        .equal-width {
+            flex: 1;
+        }
+        .stock-name {
+            h6 {
+                margin-bottom: 0;
+            }
+            img {
+                width: 38px;
+                height: 38px;
+                @include border-radius(50px);
+            }
+        }
+        .stock-chart {
+            img {
+                width: 100px;
+            }
+        }
+        .stock-price {
+            p {
+                margin: 0;
+                line-height: normal;
+            }
+        }
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--border-clr);
+        }
+    }
+}
+
+// chart animate
+.chart-bg-img,
+.chart-bg-img2 {
+    width: 100%;
+    background-image: url(assets/images/chart-bg-img.png);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: cover;
+    // background-position: 50% 0;
+    animation: chartanimate 200s linear infinite;
+    @keyframes chartanimate {
+        100% {
+            background-position: -1440px 0;
+        }
+    }
+}
+
+.chart-bg-img2 {
+    background-image: url(assets/images/chart-bg-img2.png);
+}

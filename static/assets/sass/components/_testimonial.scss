@@ -1,0 +1,50 @@
+.cover-testimonial {
+    width: calc(calc(100%/2) + 500px);
+    margin: auto;
+    position: relative;
+    padding-inline: 17vw;
+    margin-top: 3rem;
+    .cover-testimonial-card {
+        .cover-img {
+            width: 183px;
+            margin: auto;
+        }
+        p {
+            padding-top: 3rem;
+        }
+    }
+    img.side-image1,
+    img.side-image2 {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        width: 80px;
+        height: 80px;
+    }
+    img.side-image2 {
+        top: 10%;
+        left: inherit;
+        right: 10%;
+    }
+    .dotsanimate {
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        background: #B4171D;
+        width: 10px;
+        height: 10px;
+        @include border-radius(50%);
+        box-shadow: 220px -130px 0 1px black, 320px -146px 0 -1px #ED1C24, 450px -730px 0 1px #ED1C24, 20px -419px 0 -1px black;
+        animation: dostsanimte calc(2*10s) linear infinite;
+        @keyframes dostsanimte {
+            0% {
+                @include transform(rotate(0deg) translateY(0));
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                @include transform(rotate(360deg) translateY(-10px));
+                filter: hue-rotate(360deg);
+            }
+        }
+    }
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ED1C24">
+    <!-- <base href="javascript:void(0)"> -->
+    <!-- boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- animations -->
+    <link rel="stylesheet" href="vendor/css/WOW-master/css/libs/animate.css">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
+    <!-- slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!-- css file -->
+    <!-- data tables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="assets/sass/utilities/typography.min.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <title>Redcrude</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/gif" sizes="16x16">
+</head>
+
+<body data-title="Welcome! Redcrude" data-intro="working fine">
+    <!-- <div class="preloader"></div> -->
+    <!--####################################
+                      Start navbar
+      ###########################################-->
+    <div class="cover-navbar">
+        <nav class="navbar navbar-expand-sm position-absolute top-0 start-0 width-100 z-index1 py-3">
+            <div class="container">
+                <a class="navbar-brand p-0" href="index.php">
+                    <img src="assets/images/logo/logo-white.png" alt="image here">
+                    <img src="assets/images/logo/logo-black.png" alt="image here">
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="javascript:void(0)">Chart <span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="javascript:void(0)">BUY & Sells</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="all-cryptocurrencies.php">Crypto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#.">equitites</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="markets.php">MARKETS</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link caret-none" href="javascript:void(0)" id="dropdownId">Red Crude <i class="material-icons">
+                                    keyboard_arrow_down
+                                </i></a>
+                            <div class="dropdown-menu dropdown-menu-items" aria-labelledby="dropdownId">
+                                <ul>
+                                    <li><a class="dropdown-item" href="about.php">About US</a></li>
+                                    <li><a class="dropdown-item" href="pricing.php">Pricing</a></li>
+                                    <li> <a class="dropdown-item" href="terms-conditions.php">Terms & Conditions</a></li>
+                                    <li> <a class="dropdown-item" href="privacy-policy.php">Privacy Policy</a></li>
+                                    <li> <a class="dropdown-item" href="freatue-business.php">FEATURES FOR BUSINESS</a></li>
+                                </ul>
+
+
+
+
+
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.php">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.php" id="linkclick">Blogs</a>
+                        </li>
+                    </ul>
+                    <div class="d-none d-md-block ms-auto">
+                        <ul class="navbar-nav mt-2 mt-lg-0 gap-2">
+                            <li class="nav-item dropdown position-relative">
+                                <a class="nav-link caret-none" href="javascript:void(0);" id="navbarDropdown">
+                                    <img src="assets/images/user.jpg" alt="image here" class="border-radius-50px">
+                                </a>
+                                <ul class="dropdown-menu user-dropdown dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:void(0);">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <img src="assets/images/user.jpg" alt="image here" class="border-radius-50px">
+                                                <h6 class="m-0 primary-text">nicholas.chan123</h6>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- <li><a class="dropdown-item" href="javascript:void(0);">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path
+                                                    d="M10 0C4.48594 0 0 4.48625 0 10C0 15.5138 4.48594 20 10 20C15.5138 20 20 15.5141 20 10C20 4.48594 15.5138 0 10 0ZM10 1.25C14.8247 1.25 18.75 5.175 18.75 10C18.75 11.7509 18.2312 13.3816 17.3422 14.7509C16.8875 12.5403 15.4491 10.6269 13.4288 9.58438C14.0191 8.83813 14.375 7.89813 14.375 6.875C14.375 4.4625 12.4125 2.5 10 2.5C7.5875 2.5 5.625 4.4625 5.625 6.875C5.625 7.89813 5.98094 8.83813 6.57125 9.58438C4.55062 10.6269 3.1125 12.5403 2.65781 14.7509C1.76875 13.3816 1.25 11.7509 1.25 10C1.25 5.175 5.175 1.25 10 1.25ZM6.875 6.875C6.875 5.15188 8.27687 3.75 10 3.75C11.7231 3.75 13.125 5.15188 13.125 6.875C13.125 8.59813 11.7231 10 10 10C8.27687 10 6.875 8.59813 6.875 6.875ZM10 18.75C7.55625 18.75 5.34438 17.7416 3.75531 16.1206C3.80656 13.6659 5.30687 11.4587 7.55469 10.5013C8.25313 10.9738 9.09469 11.25 10 11.25C10.905 11.25 11.7469 10.9738 12.4453 10.5013C14.6931 11.4587 16.1934 13.6659 16.2447 16.1206C14.6556 17.7416 12.4438 18.75 10 18.75Z"
+                                                    fill="url(#paint0_linear_380_91)" />
+                                                <defs>
+                                                    <linearGradient id="paint0_linear_380_91" x1="0" y1="10" x2="20"
+                                                        y2="10" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#B70008" />
+                                                        <stop offset="1" stop-color="#6F0007" />
+                                                    </linearGradient>
+                                                </defs>
+                                            </svg>
+                                            <h6 class="m-0 primary-text">Sign in</h6>
+                                        </div>
+                                    </a>
+                                </li> -->
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Dashboard</a></li>
+                                    <li><a class="dropdown-item" href="help-center.php">Help center</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">Chat</a>
+                                    </li>
+
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">Dark color theme
+
+                                            <!-- <div class="toggleWrapper">
+                                                <input type="checkbox" class="dn" id="checkBox" />
+                                                <label for="checkBox" class="toggle" onclick="darkLight()">
+                                                    <span class="toggle__handler"></span>
+                                                </label>
+                                            </div> -->
+                                            <div class="toggleWrapper">
+                                                <input type="checkbox" class="dn" id="dark-mode-toggle">
+                                                <label for="dark-mode-toggle" class="toggle">
+                                                    <span class="toggle__handler"></span>
+                                                </label>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="login.php" class="dropdown-item primary-text">
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)"></a>
+                            </li> -->
+                            <li class="nav-item">
+                                <a class="primary-btn" href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
+                                        <g clip-path="url(#clip0_419_667)">
+                                            <path d="M10.208 2.16667H9.29134C9.01634 1.20833 8.13301 0.5 7.08301 0.5C6.03301 0.5 5.14967 1.20833 4.87467 2.16667H3.95801C3.61634 2.16667 3.33301 2.45 3.33301 2.79167V4.04167C3.33301 4.84167 3.99134 5.5 4.79134 5.5H9.37468C10.1747 5.5 10.833 4.84167 10.833 4.04167V2.79167C10.833 2.45 10.5497 2.16667 10.208 2.16667Z">
+                                            </path>
+                                            <path d="M11.875 3H11.6667V4.04167C11.6667 5.30833 10.6417 6.33333 9.375 6.33333H4.79167C3.525 6.33333 2.5 5.30833 2.5 4.04167V3H2.29167C1.025 3 0 4.025 0 5.29167V15.7083C0 16.975 1.025 18 2.29167 18H8.44167L8.625 16.975C8.70833 16.5083 8.925 16.0917 9.25833 15.75L9.925 15.0833H3.125C2.78333 15.0833 2.5 14.8 2.5 14.4583C2.5 14.1167 2.78333 13.8333 3.125 13.8333H11.0417C11.0833 13.8333 11.1167 13.8333 11.1583 13.85H11.1667L14.1667 10.85V5.29167C14.1667 4.025 13.1417 3 11.875 3ZM11.0417 12.375H3.125C2.78333 12.375 2.5 12.0917 2.5 11.75C2.5 11.4083 2.78333 11.125 3.125 11.125H11.0417C11.3833 11.125 11.6667 11.4083 11.6667 11.75C11.6667 12.0917 11.3833 12.375 11.0417 12.375ZM11.0417 9.66667H3.125C2.78333 9.66667 2.5 9.38333 2.5 9.04167C2.5 8.7 2.78333 8.41667 3.125 8.41667H11.0417C11.3833 8.41667 11.6667 8.7 11.6667 9.04167C11.6667 9.38333 11.3833 9.66667 11.0417 9.66667Z">
+                                            </path>
+                                            <path d="M10.4391 20.5001C10.275 20.5001 10.115 20.4351 9.99746 20.3168C9.8533 20.1726 9.7883 19.9676 9.82413 19.7659L10.2658 17.2618C10.2875 17.1359 10.3491 17.0193 10.4391 16.9284L16.6266 10.7418C17.3866 9.98011 18.1333 10.1859 18.5416 10.5943L19.5725 11.6251C20.1416 12.1934 20.1416 13.1184 19.5725 13.6876L13.385 19.8751C13.295 19.9659 13.1783 20.0268 13.0516 20.0484L10.5475 20.4901C10.5116 20.4968 10.475 20.5001 10.4391 20.5001ZM12.9433 19.4334H12.9516H12.9433Z">
+                                            </path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_419_667">
+                                                <rect width="20" height="20" fill="white" transform="translate(0 0.5)">
+                                                </rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg> Get Started</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="primary-outline-btn" href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
+                                        <g clip-path="url(#clip0_419_667)">
+                                            <path d="M10.208 2.16667H9.29134C9.01634 1.20833 8.13301 0.5 7.08301 0.5C6.03301 0.5 5.14967 1.20833 4.87467 2.16667H3.95801C3.61634 2.16667 3.33301 2.45 3.33301 2.79167V4.04167C3.33301 4.84167 3.99134 5.5 4.79134 5.5H9.37468C10.1747 5.5 10.833 4.84167 10.833 4.04167V2.79167C10.833 2.45 10.5497 2.16667 10.208 2.16667Z">
+                                            </path>
+                                            <path d="M11.875 3H11.6667V4.04167C11.6667 5.30833 10.6417 6.33333 9.375 6.33333H4.79167C3.525 6.33333 2.5 5.30833 2.5 4.04167V3H2.29167C1.025 3 0 4.025 0 5.29167V15.7083C0 16.975 1.025 18 2.29167 18H8.44167L8.625 16.975C8.70833 16.5083 8.925 16.0917 9.25833 15.75L9.925 15.0833H3.125C2.78333 15.0833 2.5 14.8 2.5 14.4583C2.5 14.1167 2.78333 13.8333 3.125 13.8333H11.0417C11.0833 13.8333 11.1167 13.8333 11.1583 13.85H11.1667L14.1667 10.85V5.29167C14.1667 4.025 13.1417 3 11.875 3ZM11.0417 12.375H3.125C2.78333 12.375 2.5 12.0917 2.5 11.75C2.5 11.4083 2.78333 11.125 3.125 11.125H11.0417C11.3833 11.125 11.6667 11.4083 11.6667 11.75C11.6667 12.0917 11.3833 12.375 11.0417 12.375ZM11.0417 9.66667H3.125C2.78333 9.66667 2.5 9.38333 2.5 9.04167C2.5 8.7 2.78333 8.41667 3.125 8.41667H11.0417C11.3833 8.41667 11.6667 8.7 11.6667 9.04167C11.6667 9.38333 11.3833 9.66667 11.0417 9.66667Z">
+                                            </path>
+                                            <path d="M10.4391 20.5001C10.275 20.5001 10.115 20.4351 9.99746 20.3168C9.8533 20.1726 9.7883 19.9676 9.82413 19.7659L10.2658 17.2618C10.2875 17.1359 10.3491 17.0193 10.4391 16.9284L16.6266 10.7418C17.3866 9.98011 18.1333 10.1859 18.5416 10.5943L19.5725 11.6251C20.1416 12.1934 20.1416 13.1184 19.5725 13.6876L13.385 19.8751C13.295 19.9659 13.1783 20.0268 13.0516 20.0484L10.5475 20.4901C10.5116 20.4968 10.475 20.5001 10.4391 20.5001ZM12.9433 19.4334H12.9516H12.9433Z">
+                                            </path>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_419_667">
+                                                <rect width="20" height="20" fill="white" transform="translate(0 0.5)">
+                                                </rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg> My Wallet</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <!--####################################
+                      End navbar
+      ###########################################-->

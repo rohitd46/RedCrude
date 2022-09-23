@@ -1,0 +1,26 @@
+.notify-alert {
+    background: #FFEBED;
+    border: 1px solid #FFDBDE;
+    @include border-radius(8px);
+    margin-bottom: 30px;
+    svg {
+        fill: #E33042;
+    }
+    p {
+        margin: 0;
+        color: #E33042;
+    }
+}
+
+.user-area {
+    img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+    }
+    p,
+    h4 {
+        margin: 0;
+    }
+   
+}

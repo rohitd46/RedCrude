@@ -1,0 +1,125 @@
+//####################
+// Start according section
+// #####################
+.according-style-2 {
+    .accordion-item {
+        border: 0;
+        // margin-bottom: 10px;
+        border-bottom: 1px solid var(--border-clr);
+        background-color: transparent;
+        .accordion-header {
+            padding: 0;
+            border: 0;
+            button {
+                background-color: transparent;
+                position: relative;
+                color: var(--heading-clr);
+                font-weight: normal;
+                // padding: 20px 40px 20px 0px;
+                padding: 20px 30px;
+                display: block;
+                line-height: normal;
+                font-weight: 400;
+                font-size: 20px;
+                &[aria-expanded='true'] {
+                    background: rgba(0, 143, 251, 0.8);
+                    color: white;
+                }
+                &::after {
+                    content: "add";
+                    font-family: "Material Icons";
+                    font-size: 28px;
+                    font-weight: normal;
+                    position: absolute;
+                    right: 30px;
+                    top: 50%;
+                    text-align: center;
+                    line-height: 1.25rem;
+                    background-image: none;
+                    @include transform(translateY(-50%));
+                }
+                &[aria-expanded="false"]::after {
+                    content: "remove";
+                }
+                &:not(.collapsed) {
+                    box-shadow: none;
+                }
+            }
+            &:hover {
+                button {
+                    color: var(--primary-clr);
+                }
+            }
+        }
+        .collapse {
+            transition: .15s;
+            background: rgba(0, 143, 251, 0.5);
+            p {
+                color: var(--para-white-drk-mode);
+            }
+        }
+        .accordion-body {
+            // border: 1px solid #f3f3f3;
+            border-top: 0;
+            p {
+                margin-bottom: 0;
+                line-height: 32px;
+                color: var(--para-white-drk-mode);
+            }
+        }
+    }
+}
+
+.according-style-3 {
+    .accordion-item {
+        border: 0;
+        background-color: transparent;
+        .accordion-header {
+            padding: 0;
+            border-bottom: 1px solid var(--border-clr);
+            button {
+                background-color: transparent;
+                position: relative;
+                color: var(--heading-clr);
+                font-weight: normal;
+                padding: 15px 40px 15px 15px;
+                display: block;
+                line-height: normal;
+                font-weight: 500;
+                &::after {
+                    content: "add";
+                    font-family: "Material Icons";
+                    font-size: 28px;
+                    font-weight: normal;
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    text-align: center;
+                    line-height: 1.25rem;
+                    background-image: none;
+                    @include transform(translateY(-50%));
+                }
+                &[aria-expanded="false"]::after {
+                    content: "remove";
+                }
+                &:not(.collapsed) {
+                    box-shadow: none;
+                }
+            }
+            &:hover {
+                button {
+                    color: var(--primary-clr);
+                }
+            }
+        }
+        .accordion-body {
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+//#########################
+// END according section
+// ########################

@@ -1,0 +1,66 @@
+.according-style-1 {
+    .accordion-item {
+        border: 1px solid var(--border-clr);
+        margin-bottom: 10px;
+        .accordion-header {
+            padding: 0;
+            border: 0;
+            button {
+                background-color: white;
+                position: relative;
+                color: #333333;
+                font-weight: normal;
+                padding: 15px 40px 15px 15px;
+                display: block;
+                line-height: normal;
+                font-weight: 400;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                border-bottom: 1px solid var(--border-clr);
+                i {
+                    font-size: 15px;
+                }
+                .tash-icon {
+                    display: flex;
+                    align-items: center;
+                    i {
+                        font-size: 20px;
+                    }
+                }
+                &::after {
+                    content: "\f068";
+                    font-family: "FontAwesome";
+                    font-size: 16px;
+                    font-weight: normal;
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    text-align: center;
+                    line-height: 1.25rem;
+                    background-image: none;
+                    @include transform(translateY(-50%));
+                }
+                &[aria-expanded="false"]::after {
+                    content: "\f067 ";
+                }
+                &:not(.collapsed) {
+                    box-shadow: none;
+                }
+            }
+            &:hover {
+                button {
+                    color: var(--primary-clr);
+                }
+            }
+        }
+        .accordion-body {
+            // border: 1px solid #f3f3f3;
+            border-top: 0;
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

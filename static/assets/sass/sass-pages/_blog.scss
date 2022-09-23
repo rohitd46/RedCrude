@@ -1,0 +1,60 @@
+.cover-blog-slider,
+.blog-grid {
+    padding-inline: 5vw;
+}
+
+.blog-grid {
+    .blog-grid-v4 {
+        display: none;
+    }
+}
+
+.news-grid {
+    h3 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.load-news {
+    display: none;
+}
+
+// ######################## Blog Details Page ###########################
+// ##################################################################
+.cover-blog-detail-card {
+    padding: 5vw;
+    margin-top: -13rem;
+    background: #F8F7F7;
+    h5 {
+        font-weight: 600
+    }
+    .cover-blog-social-links {
+        ul {
+            li {
+                a {
+                    img {
+                        @include transition(.5s);
+                    }
+                    &:hover {
+                        img {
+                            @include transform(translateY(-8px));
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .single-blog-img {
+        padding-inline: 5vw;
+        margin-block: 50px;
+        img {
+            height: 500px;
+            object-fit: cover;
+            @include border-radius(5px);
+        }
+    }
+}

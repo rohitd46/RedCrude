@@ -1,0 +1,101 @@
+//####################
+// Start Contact section
+// #####################
+.cover-contact,
+.cover-contact2 {
+    h2 {
+        position: relative;
+        padding-left: 30px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            width: 23px;
+            height: 1px;
+            background: var(--primary-clr);
+        }
+    }
+    p {
+        color: white;
+        border-bottom: 1px solid white;
+        display: inline-block;
+        padding-bottom: 25px;
+    }
+}
+
+.cover-form,
+.cover-form2 {
+    form {
+        label {
+            color: white;
+            margin-bottom: 6px;
+        }
+        input,
+        textarea {
+            background: transparent !important;
+            color: white !important;
+            &::placeholder {
+                color: white !important;
+            }
+        }
+        button {
+            padding: 11px 30px !important;
+        }
+    }
+}
+
+.cover-contact2 {
+    h2 {
+        position: relative;
+        padding-left: 30px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            width: 23px;
+            height: 1px;
+            background: var(--primary-clr);
+        }
+    }
+    h6 {
+        border-bottom: 1px solid var(--border-clr);
+        display: inline-block;
+        padding-bottom: 25px;
+    }
+}
+
+.cover-form2 {
+    form {
+        label {
+            color: black;
+            margin-bottom: 6px;
+        }
+        input,
+        textarea {
+            background: transparent !important;
+            color: #A8A8A8 !important;
+            &::placeholder {
+                color: #A8A8A8 !important;
+            }
+        }
+        button {
+            padding: 11px 30px !important;
+        }
+    }
+}
+
+//####################
+// End Contact section
+// #####################

@@ -1,0 +1,205 @@
+// wishlist btn
+.whislist-overlay-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    ul {
+        li {
+            a {
+                --alignment: 40px;
+                width: var(--alignment);
+                height: var(--alignment);
+                text-align: center;
+                @include border-radius(50%);
+                background: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+                i {
+                    color: var(--black-clr-1);
+                    line-height: var(--alignment);
+                }
+                &:hover {
+                    i {
+                        color: var(--secondary-clr);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// dashboard shap
+.lg-circle-shap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -36px;
+        left: -47px;
+        width: 130px;
+        height: 130px;
+        background: rgba(var(--primary-rgb-clr), 0.2);
+        @include border-radius(50%);
+    }
+    &::after {
+        bottom: initial;
+        left: initial;
+        top: -36px;
+        right: -47px;
+    }
+}
+
+.sm-circle-shap1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 23px;
+        right: 106px;
+        width: 18px;
+        height: 18px;
+        background: rgba(var(--primary-rgb-clr), 0.2);
+        @include border-radius(50%);
+    }
+}
+
+// play button
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+    img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+// ################## START STARS RATING AREA  ######################
+.cover-rating {
+    .rating {
+        border: none;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin-block: 10px;
+    }
+    .rating>input {
+        display: none;
+    }
+    .rating>label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+    }
+    .rating>.half:before {
+        content: "\f089";
+        position: absolute;
+    }
+    .rating>label {
+        color: #ddd;
+        float: right;
+        cursor: pointer;
+        line-height: normal;
+        width: fit-content;
+    }
+    /***** CSS Magic to Highlight Stars on Hover *****/
+    .rating>input:checked~label,
+    /* show gold star when clicked */
+    .rating:not(:checked)>label:hover,
+    /* hover current star */
+    .rating:not(:checked)>label:hover~label {
+        color: #FFCB12;
+    }
+    /* hover previous stars in list */
+    .rating>input:checked+label:hover,
+    /* hover current star when changing rating */
+    .rating>input:checked~label:hover,
+    .rating>label:hover~input:checked~label,
+    /* lighten current selection */
+    .rating>input:checked~label:hover~label {
+        color: rgba($color: #FFCB12, $alpha: 0.5);
+    }
+}
+
+// ################## END STARS RATING AREA  ######################
+.profile-contact-info {
+    ul {
+        li {
+            a {
+                color: #555555;
+                margin-bottom: 10px;
+                display: block;
+                i {
+                    color: #4F4F4F;
+                    margin-right: 4px;
+                }
+                &:hover {
+                    color: var(--primary-clr);
+                    i {
+                        color: var(--primary-clr);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// commnet- box
+.comment-box {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    background: #F5F9FF;
+    padding: 20px;
+    @include border-radius(5px);
+    margin-top: 15px;
+    ul {
+        li {
+            i {
+                color: #F9C81B;
+            }
+        }
+    }
+    h6 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    img {
+        width: 50px;
+        height: 50px;
+        @include border-radius(50%);
+        object-fit: cover;
+    }
+}
+
+// video upload show
+.upload-video-show {
+    &>ul {
+        li {
+            margin-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            &:not(:last-child) {
+                border-bottom: 1px solid var(--border-clr);
+            }
+        }
+    }
+}
