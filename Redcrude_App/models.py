@@ -10,11 +10,11 @@ class CustomUser(AbstractUser):
     )
     
     user_type=models.CharField(choices=USER, max_length=50,default='admin')
-    phonenumber=models.IntegerField(null=True)
+    phonenumber=models.CharField(max_length=10)
     
 class Users(models.Model):
     admin=models.OneToOneField(CustomUser,on_delete=models.CASCADE)
-    phonenumber=models.PositiveIntegerField()
+    phonenumber=models.CharField(max_length=10)
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now_add=True)
     
@@ -23,7 +23,7 @@ class Users(models.Model):
     
 class Teacher(models.Model):
     admin=models.OneToOneField(CustomUser,on_delete=models.CASCADE)
-    phonenumber=models.PositiveIntegerField()
+    phonenumber=models.CharField(max_length=10)
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now_add=True)
     
@@ -32,7 +32,7 @@ class Teacher(models.Model):
     
 class Trader(models.Model):
     admin=models.OneToOneField(CustomUser,on_delete=models.CASCADE)
-    phonenumber=models.PositiveIntegerField()
+    phonenumber=models.CharField(max_length=10)
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now_add=True)
     

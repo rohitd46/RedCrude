@@ -17,9 +17,9 @@ def LOGIN(request):
         user=EmailBackend.authenticate(request,username=request.POST.get('email'),
                                        password=request.POST.get('password'))
         
-        profile_obj=Profile.objects.filter(user=user).first()
-        if not profile_obj.is_verified:
-            return redirect('login')
+        # profile_obj=Profile.objects.filter(user=user).first()
+        # if not profile_obj.is_verified:
+        #     return redirect('login')
         if user!= None:
             login(request,user)
             user_type=user.user_type
@@ -50,13 +50,13 @@ def SIGNUPUSER(request):
               user=CustomUser(first_name=first_name,username=first_name,email=email,user_type='user')
               user.set_password(password)
               user.save()
-              users=Users(admin=user,phonenumber=phonenumber)
-              users.save()
-              auth_token=str(uuid.uuid4())
-              profile_obj=Profile.objects.create(user=user,auth_token=auth_token)
-              profile_obj.save()
-              verify_send_email(email,auth_token)
-              return redirect('tokensend')
+              us=Users(admin=user,phonenumber=phonenumber)
+              us.save()
+            #   auth_token=str(uuid.uuid4())
+            #   profile_obj=Profile.objects.create(user=user,auth_token=auth_token)
+            #   profile_obj.save()
+            #   verify_send_email(email,auth_token)
+              return redirect('login')
           
       return render(request,'signupuser.html')
 
@@ -75,11 +75,11 @@ def SIGNUPTEACHER(request):
               user.save()
               techer=Teacher(admin=user,phonenumber=phonenumber)
               techer.save()
-              auth_token=str(uuid.uuid4())
-              profile_obj=Profile.objects.create(user=user,auth_token=auth_token)
-              profile_obj.save()
-              verify_send_email(email,auth_token)
-              return redirect('tokensend')
+            #   auth_token=str(uuid.uuid4())
+            #   profile_obj=Profile.objects.create(user=user,auth_token=auth_token)
+            #   profile_obj.save()
+            #   verify_send_email(email,auth_token)
+              return redirect('login')
     return render(request,'signupteacher.html')
 
 def SIGNUPTRADER(request):
@@ -97,42 +97,42 @@ def SIGNUPTRADER(request):
               user.save()
               trader=Trader(admin=user,phonenumber=phonenumber)
               trader.save()
-              auth_token=str(uuid.uuid4())
-              profile_obj=Profile.objects.create(user=user,auth_token=auth_token)
-              profile_obj.save()
-              verify_send_email(email,auth_token)
-              return redirect('tokensend')
+            #   auth_token=str(uuid.uuid4())
+            #   profile_obj=Profile.objects.create(user=user,auth_token=auth_token)
+            #   profile_obj.save()
+            #   verify_send_email(email,auth_token)
+              return redirect('login')
     return render(request,'signuptrader.html')
 
 def ForgetPassword(request):
     return render(request,'forgetpassword.html')
 
-def Succes(request):
-    return render(request,'succes.html')
+# def Succes(request):
+#     return render(request,'succes.html')
 
-def token_send(request):
-    return render(request,'tokensend.html')
-
-
-def Error(request):
-    return render(request,'error.html')
+# def token_send(request):
+#     return render(request,'tokensend.html')
 
 
-def verify(request,auth_token):
-    profile_obj=Profile.objects.filter(auth_token=auth_token).first()
-    if profile_obj:
-        profile_obj.is_verified=True
-        profile_obj.save()
-        return redirect('succes')
-    else:
-        return redirect('error')
+# def Error(request):
+#     return render(request,'error.html')
 
-def verify_send_email(email,token):
-    subject="Your Account need to be Verifiy"
-    message=f"Click this link to verify your account http://127.0.0.1:8000/verify/{token}"
-    email_form=settings.EMAIL_HOST_USER
-    recipient_list=[email]
-    send_mail(subject,message,email_form,recipient_list)
+
+# def verify(request,auth_token):
+#     profile_obj=Profile.objects.filter(auth_token=auth_token).first()
+#     if profile_obj:
+#         profile_obj.is_verified=True
+#         profile_obj.save()
+#         return redirect('succes')
+#     else:
+#         return redirect('error')
+
+# def verify_send_email(email,token):
+#     subject="Your Account need to be Verifiy"
+#     message=f"Click this link to verify your account http://127.0.0.1:8000/verify/{token}"
+#     email_form=settings.EMAIL_HOST_USER
+#     recipient_list=[email]
+#     send_mail(subject,message,email_form,recipient_list)
 
 @login_required(login_url='login')    
 def USERDASHBOARD(request):
