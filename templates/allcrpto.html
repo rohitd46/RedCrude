@@ -1,0 +1,230 @@
+{%include 'include/header.html'%}
+{%load static%}
+<!--####################################
+                      Start banner section
+      ###########################################-->
+<section class="banner-v2" style="background-image: url({%static 'assets/images/banners/8.jpg'%})">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div class="text-center">
+                    <h1 class="text-white font-weight-600 mb-3">All CryptoCurrencies</h1>
+                    <p class="text-white font-weight-600 lh-base">Bitcoin (BTC) is a type of digital crypto currency,
+                        utilizing
+                        peer-to-peer transactions, mining and other technological feats into a modern day asset. Use
+                        this page to follow news and updates regarding Bitcoin price. Create alerts, follow analysis,
+                        news and opinion, get real time market data about the Bitcoin value.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--####################################
+                      Start banner section
+      ###########################################-->
+
+
+<!--####################################
+                      Start CryptoCurrencies section
+      ###########################################-->
+<section>
+    <div class="alert-title toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <p><i class="material-icons">
+                        info
+                    </i> <a href="javascript:void(0)" class="fst-italic">Sign In</a> / <a href="javascript:void(0)" class="fst-italic">Free Sign Up</a>
+                    now to save your preferred filters</p>
+                <ul>
+                    <li><a href="javascript:void(0)" data-bs-dismiss="toast" aria-label="Close"><i
+                                class="material-icons">
+                                close
+                            </i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h3 class="block-title">Customize your own table view</h3>
+
+        <div class="cover-filters d-block my-4">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-5">
+                    <div class="search-bar">
+                        <form action="">
+                            <div class="form-group position-relative mb-0 ">
+                                <div class=" dataTabel_filter">
+                                    <input type="search" class="form-control"
+                                        placeholder="Find cryptocurrency coin (name / symbol)" id="custom-filter">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <dl class="dropdown dropdown-image">
+                        <dt><a href="javascript:vode(0)"><span>Please select the country</span></a> <i
+                                class="material-icons">
+                                keyboard_arrow_down
+                            </i></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="javascript:vode(0)"><img class="flag"
+                                            src="http://www.jankoatwarpspeed.com/wp-content/uploads/examples/reinventing-drop-down/br.png"
+                                            alt="image here" /> Brazil<span class="value">BR</span></a></li>
+                                <li><a href="javascript:vode(0)"><img class="flag"
+                                            src="http://www.jankoatwarpspeed.com/wp-content/uploads/examples/reinventing-drop-down/fr.png"
+                                            alt="image here" /> France<span class="value">FR</span></a></li>
+
+                            </ul>
+                        </dd>
+                    </dl>
+
+                    <!-- <dl class="dropdown sample">
+                        <dt><a href="javascript:vode(0)"><span>Please select the country</span></a></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="javascript:vode(0)">Brazil<img class="flag"
+                                            src="http://www.jankoatwarpspeed.com/wp-content/uploads/examples/reinventing-drop-down/br.png"
+                                            alt="image here" /><span class="value">BR</span></a></li>
+                                <li><a href="javascript:vode(0)">France<img class="flag"
+                                            src="http://www.jankoatwarpspeed.com/wp-content/uploads/examples/reinventing-drop-down/fr.png"
+                                            alt="image here" /><span class="value">FR</span></a></li>
+
+                            </ul>
+                        </dd>
+                    </dl> -->
+                </div>
+            </div>
+
+        </div>
+        <div class="cover-datatable">
+            <table class="display datatable1">
+                <thead>
+                    <tr>
+                        <th class="hash-value">#</th>
+                        <th>Name</th>
+                        <th>Symbol</th>
+                        <th>Price(USD)</th>
+                        <th>Market Cap</th>
+                        <th>Vol(24H)</th>
+                        <th>Total Vol</th>
+                        <th>Chg (24H)</th>
+                        <th>Chg (7D)</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><a href="bitcoin.php"><img src="{%static  'assets/images/coins/Bitcoin.png'%}" alt="image here" class="coin">
+                                Bitcoin</a></td>
+                        <td>BTC</td>
+                        <td><a href="javascript:void(0)">38,363</a></td>
+                        <td>$742.25B</td>
+                        <td>$19.15B</td>
+                        <td>23.24%</td>
+                        <td class="increment-text">+0.19%</td>
+                        <td class="increment-text">+2.04%</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><a href="javascript:void(0)"><img src="{%static 'assets/images/coins/Ethereum.png'%}" alt="image here" class="coin"> Bitcoin</a>
+                        </td>
+                        <td>BTC</td>
+                        <td><a href="javascript:void(0)">38,363</a></td>
+                        <td>$742.25B</td>
+                        <td>$19.15B</td>
+                        <td>23.24%</td>
+                        <td class="increment-text">+0.19%</td>
+                        <td class="increment-text">+2.04%</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><a href="javascript:void(0)"><img src="{%static 'assets/images/coins/Bitcoin.png'%}" alt="image here" class="coin"> Bitcoin</a></td>
+                        <td>BTC</td>
+                        <td><a href="javascript:void(0)">38,363</a></td>
+                        <td>$742.25B</td>
+                        <td>$19.15B</td>
+                        <td>23.24%</td>
+                        <td class="increment-text">+0.19%</td>
+                        <td class="increment-text">+2.04%</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><a href="javascript:void(0)"><img src="{%static 'assets/images/coins/Bitcoin.png'%}" alt="image here" class="coin"> Bitcoin</a></td>
+                        <td>BTC</td>
+                        <td><a href="javascript:void(0)">38,363</a></td>
+                        <td>$742.25B</td>
+                        <td>$19.15B</td>
+                        <td>23.24%</td>
+                        <td class="increment-text">+0.19%</td>
+                        <td class="increment-text">+2.04%</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><a href="javascript:void(0)"><img src="{%static 'assets/images/coins/Bitcoin.png'%}" alt="image here" class="coin"> Bitcoin</a></td>
+                        <td>BTC</td>
+                        <td><a href="javascript:void(0)">38,363</a></td>
+                        <td>$742.25B</td>
+                        <td>$19.15B</td>
+                        <td>23.24%</td>
+                        <td class="increment-text">+0.19%</td>
+                        <td class="increment-text">+2.04%</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!--####################################
+                      Start CryptoCurrencies section
+      ###########################################-->
+
+{%include 'include/footer.html'%}
+
+<script>
+$(".dropdown img.flag").addClass("flagvisibility");
+$(".dropdown dt a").click(function() {
+    $(".dropdown dd ul").toggle();
+});
+
+$(".dropdown dd ul li a").click(function() {
+    var text = $(this).html();
+    $(".dropdown dt a span").html(text);
+    $(".dropdown dd ul").hide();
+    $("#result").html("Selected value is: " + getSelectedValue("sample"));
+});
+
+function getSelectedValue(id) {
+    return $("#" + id).find("dt a span.value").html();
+}
+
+$(document).bind('click', function(e) {
+    var $clicked = $(e.target);
+    if (!$clicked.parents().hasClass("dropdown"))
+        $(".dropdown dd ul").hide();
+});
+
+$(".dropdown img.flag").toggleClass("flagvisibility");
+
+
+$('.datatable1').DataTable({
+    responsive: true,
+    "bLengthChange": false,
+    // "ordering": false,
+    "orderClasses": false,
+    'stripeClasses': ['', 'stripe'],
+    // "info": false,
+    "paging": false,
+});
+// $('.dataTables_length').removeClass('form-control');
+var table = $('.datatable1').DataTable();
+//DataTable custom search field
+$('#custom-filter').keyup(function() {
+    table.search(this.value).draw();
+});
+</script>

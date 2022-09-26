@@ -141,3 +141,30 @@ def USERDASHBOARD(request):
 def Logout(request):
     logout(request)
     return redirect('login')
+
+def About(request):
+    return render(request,'about.html')
+
+def AllCrepto(request):
+    return render(request,'allcrpto.html')
+
+def Market(request):
+    return render(request,'market.html')
+
+def Pricing(request):
+    return render(request,'pricing.html')
+
+def Term(request):
+    return render(request,'trmcon.html')
+
+def Freatue(request):
+    return render(request,'freatue.html')
+
+def Privacy(request):
+    return render(request,'privacy.html')
+
+def Contect(request):
+    return render(request,'contect.html')
+
+def Blog(request):
+    return render(request,'blog.html')

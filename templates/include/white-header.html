@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
+{%load static%}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +42,7 @@
     <div class="cover-navbar2">
         <nav class="navbar navbar-expand-sm">
             <div class="container">
-                <a class="navbar-brand p-0" href="index.php">
+                <a class="navbar-brand p-0" href="{%url 'index'%}">
                     <img src="{%static 'assets/images/logo/logo-white.png'%}" alt="image here">
                     <img src="{%static 'assets/images/logo/logo-black.png'%}" alt="image here">
                 </a>
@@ -59,13 +59,13 @@
                                 <a class="nav-link" href="javascript:void(0)">BUY & Sells</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="all-cryptocurrencies.php">Crypto</a>
+                                <a class="nav-link" href="{% url 'allcrepto'%}">Crypto</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#.">equitites</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="markets.php">MARKETS</a>
+                                <a class="nav-link" href="{%url 'market'%}">MARKETS</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link caret-none" href="javascript:void(0)" id="dropdownId">Red Crude <i class="material-icons">
@@ -73,12 +73,12 @@
                                     </i></a>
                                 <div class="dropdown-menu dropdown-menu-items" aria-labelledby="dropdownId">
                                     <ul>
-                                        <li><a class="dropdown-item" href="about.php">About US</a></li>
-                                        <li><a class="dropdown-item" href="pricing.php">Pricing</a></li>
-                                        <li> <a class="dropdown-item" href="terms-conditions.php">Terms & Conditions</a>
+                                        <li><a class="dropdown-item" href="{%url 'about'%}">About US</a></li>
+                                        <li><a class="dropdown-item" href="{%url 'pricing'%}">Pricing</a></li>
+                                        <li> <a class="dropdown-item" href="{%url 'terms-conditions'%}">Terms & Conditions</a>
                                         </li>
-                                        <li> <a class="dropdown-item" href="privacy-policy.php">Privacy Policy</a></li>
-                                        <li> <a class="dropdown-item" href="freatue-business.php">FEATURES FOR
+                                        <li> <a class="dropdown-item" href="{%url 'privacy-policy'%}">Privacy Policy</a></li>
+                                        <li> <a class="dropdown-item" href="{%url 'freatue-business'%}">FEATURES FOR
                                                 BUSINESS</a></li>
                                     </ul>
 
@@ -89,10 +89,10 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.php">Contact</a>
+                                <a class="nav-link" href="{%url 'contect'%}">Contact</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="blog.php">Blogs</a>
+                                <a class="nav-link" href="{%url 'blog'%}">Blogs</a>
                             </li>
                         </ul>
                         <div class="d-none d-md-block ms-auto">
@@ -162,7 +162,7 @@
                                         </li>
 
                                         <li>
-                                            <a href="login.php" class="dropdown-item primary-text">
+                                            <a href="{%url 'login'%}" class="dropdown-item primary-text">
                                                 Logout
                                             </a>
                                         </li>
@@ -172,7 +172,7 @@
                                 <a class="nav-link" href="javascript:void(0)"></a>
                             </li> -->
                                 <li class="nav-item">
-                                    <a class="primary-btn" href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
+                                    <a class="primary-btn" href="{%url 'login'%}"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
                                             <g clip-path="url(#clip0_419_667)">
                                                 <path d="M10.208 2.16667H9.29134C9.01634 1.20833 8.13301 0.5 7.08301 0.5C6.03301 0.5 5.14967 1.20833 4.87467 2.16667H3.95801C3.61634 2.16667 3.33301 2.45 3.33301 2.79167V4.04167C3.33301 4.84167 3.99134 5.5 4.79134 5.5H9.37468C10.1747 5.5 10.833 4.84167 10.833 4.04167V2.79167C10.833 2.45 10.5497 2.16667 10.208 2.16667Z">
                                                 </path>
@@ -190,7 +190,7 @@
                                         </svg> Get Started</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="primary-outline-btn" href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
+                                    <a class="primary-outline-btn" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
                                             <g clip-path="url(#clip0_419_667)">
                                                 <path d="M10.208 2.16667H9.29134C9.01634 1.20833 8.13301 0.5 7.08301 0.5C6.03301 0.5 5.14967 1.20833 4.87467 2.16667H3.95801C3.61634 2.16667 3.33301 2.45 3.33301 2.79167V4.04167C3.33301 4.84167 3.99134 5.5 4.79134 5.5H9.37468C10.1747 5.5 10.833 4.84167 10.833 4.04167V2.79167C10.833 2.45 10.5497 2.16667 10.208 2.16667Z">
                                                 </path>

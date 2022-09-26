@@ -1,0 +1,180 @@
+{%include 'include/header.html'%}
+{%load static%}
+<!--####################################
+                      Start banner section
+      ###########################################-->
+<section class="banner-v2" style="background-image: url({%static 'assets/images/banners/7.jpg'%})">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div class="text-center">
+                    <h1 class="text-white font-weight-600">Markets</h1>
+                    <p class="text-white fst-italic lh-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Morbi ut cursus odio, ullamcorper aliquet urna. Maecenas non dui eget metus efficitur dapibus
+                        blandit sed tortor. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--####################################
+                      Start banner section
+      ###########################################-->
+<!--####################################
+                      Start market section
+      ###########################################-->
+<section>
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-center justify-content-lg-between mb-5 flex-wrap gap-2 ">
+            <h3 class="block-title mb-0">Markets</h3>
+            <div class="search-v2">
+                <div class="form-group position-relative mb-0">
+                <input type="text" class="form-control" placeholder="Search Stock Name Here....">
+                <i class="material-icons">
+                    search
+                </i>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="table-v1">
+                    <div class="table-responsive">
+                    <table class="table align-middle table-hover">
+                        <thead>
+                            <tr>
+                                <th>Stock Name</th>
+                                <th>Commodities</th>
+                                <th>Volume(BUSD)</th>
+                                <th>Change</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+                            <tr>
+                                <td>MCX/ USDT</td>
+                                <td>Crude Palm Oil</td>
+                                <td>48,7213.64</td>
+                                <td>
+                                    <p class="increment-text">+3.57%</p>
+                                    <p class="increment-text">+478.45</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MCX/ USDT</td>
+                                <td>Crude Palm Oil</td>
+                                <td>48,7213.64</td>
+                                <td>
+                                    <p class="increment-text">+3.57%</p>
+                                    <p class="increment-text">+478.45</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MCX/ USDT</td>
+                                <td>Crude Palm Oil</td>
+                                <td>48,7213.64</td>
+                                <td>
+                                    <p class="increment-text">+3.57%</p>
+                                    <p class="decrement-text">-478.45</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MCX/ USDT</td>
+                                <td>Crude Palm Oil</td>
+                                <td>48,7213.64</td>
+                                <td>
+                                    <p class="increment-text">+3.57%</p>
+                                    <p class="increment-text">+478.45</p>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="chartv1 position-relative">
+                    <div class="position-absolute top-0 start-0">
+                        <h5 class="mb-3">MCX/ USDT Chart</h5>
+                        <ul>
+                            <li><a href="javascript:void(0)" class="primary-btn extra-btn-padding-25">Trade Now</a></li>
+                        </ul>
+                    </div>
+                    <img src="{%static  'assets/images/chart.svg'%}" alt="image here">
+                    <ul class="d-flex align-itesm-center justify-content-between">
+                        <li>Jan</li>
+                        <li>Feb</li>
+                        <li>Mar</li>
+                        <li>Apr</li>
+                        <li>May</li>
+                        <li>Jun</li>
+                        <li>Jul</li>
+                        <li>Aug</li>
+                        <li>Sept</li>
+                        <li>Oct</li>
+                        <li>Nov</li>
+                        <li>Dec</li>
+                    </ul>
+                    <ul class="d-flex align-itesm-center gap-2 gap-md-4 my-3">
+                        <li>
+                            <div class="checktext">
+                                <input type="radio" name="daycheck" id="daycheck" checked="">
+                                <label for="daycheck">1D</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checktext">
+                                <input type="radio" name="daycheck" id="daycheck">
+                                <label for="daycheck">1W</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checktext">
+                                <input type="radio" name="daycheck" id="daycheck">
+                                <label for="daycheck">1M</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checktext">
+                                <input type="radio" name="daycheck" id="daycheck">
+                                <label for="daycheck">3M</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checktext">
+                                <input type="radio" name="daycheck" id="daycheck">
+                                <label for="daycheck">1Y</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checktext">
+                                <input type="radio" name="daycheck" id="daycheck">
+                                <label for="daycheck">3Y</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checktext">
+                                <input type="radio" name="daycheck" id="daycheck">
+                                <label for="daycheck">5Y</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="checktext">
+                                <input type="radio" name="daycheck" id="daycheck">
+                                <label for="daycheck">ALl</label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--####################################
+                    end market section
+      ###########################################-->
+
+
+{%include 'include/footer.html'%}

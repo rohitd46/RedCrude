@@ -1,0 +1,59 @@
+{%include  'include/white-header.html'%}
+{%load static%}
+<!--####################################
+                      Start Contact
+      ###########################################-->
+<section class="banner-v1" style="background-image: url({%static 'assets/images/contact-bg.jpg'%})">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="cover-contact">
+                    <h2 class="primary-text">CONTACT US</h2>
+                    <p>Our team will reply to all inquiries within 24 hours.</p>
+                    <div class="cover-form mt-4">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group mb-3">
+                                        <label>Full Name</label>
+                                        <input type="text" name="fullname" placeholder="Enter your name"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label>Email</label>
+                                        <input type="email" name="email" placeholder="Enter your email address"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label>Phone</label>
+                                        <input type="phone" name="phone" placeholder="Enter your number"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group mb-5">
+                                        <label>Message</label>
+                                        <textarea name="message" rows="5" class="form-control"
+                                            placeholder="Enter your message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="primary-btn">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--####################################
+                      Start contact
+      ###########################################-->
+{%include 'include/footer.html'%}

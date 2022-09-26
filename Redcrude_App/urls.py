@@ -17,4 +17,13 @@ urlpatterns = [
     # path('verify/<auth_token>',views.verify,name='verify'),
     path('Dashboard',views.USERDASHBOARD,name='Dashboard'),
     path('logout', views.Logout,name='logout'),
+    path('about', views.About,name='about'),
+    path('allcreptacurrncy', views.AllCrepto,name='allcrepto'),
+    path('market', views.Market,name='market'),
+    path('pricing', views.Pricing,name='pricing'),
+    path('terms-conditions', views.Term,name='terms-conditions'),
+    path('privacy-policy', views.Privacy,name='privacy-policy'),
+    path('freatue-business', views.Freatue,name='freatue-business'),
+    path('contect', views.Contect,name='contect'),
+    path('blog', views.Blog,name='blog'),
 ]
