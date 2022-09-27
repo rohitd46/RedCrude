@@ -7,7 +7,7 @@
         <div class="row gy-4 gy-md-0 gx-2 gx-md-5">
             <div class="col-lg-3">
                 <div class="cover-footer-logo text-center text-md-start mb-3 mb-md-0">
-                    <a href="index.html"><img src="{%static 'assets/images/logo/logo-white.png'%}" alt="image here"></a>
+                    <a href="{%url 'index'%}"><img src="{%static 'assets/images/logo/logo-white.png'%}" alt="image here"></a>
                 </div>
                 <div class="cover-footer-icons-links mt-4 text-center text-md-start">
                     <h6 class="font-weight-600 fst-italic text-white">Expert Trading With Us</h6>
@@ -24,13 +24,13 @@
                 <div class="cover-footer-links">
                     <h3 class="footer-title">Products</h3>
                     <ul>
-                        <li><a href="index.php">Home</a></li>
+                        <li><a href="{%url 'index'%}">Home</a></li>
                         <li><a href="javascript:void(0)">Charts</a></li>
-                        <li><a href="markets.php">Markets</a></li>
+                        <li><a href="{%url 'market'%}">Markets</a></li>
                         <li><a href="javascript:void(0)">Buy & Sells</a></li>
-                        <li><a href="wallet.php">Wallet</a></li>
+                        <li><a href="{%url 'wallet'%}">Wallet</a></li>
                         <li><a href="javascript:void(0)">Features</a></li>
-                        <li><a href="pricing.php">Pricing</a></li>
+                        <li><a href="{%url 'pricing'%}">Pricing</a></li>
                         <li><a href="javascript:void(0)">Chat </a></li>
 
                     </ul>
@@ -40,15 +40,15 @@
                 <div class="cover-footer-links">
                     <h3 class="footer-title">Other LINKS</h3>
                     <ul>
-                        <li><a href="about.php">About Us </a></li>
-                        <li><a href="contact.php">Contact Us</a></li>
-                        <li><a href="terms-conditions.php">Terms & Conditions </a></li>
-                        <li><a href="privacy-policy.php">Privacy Policy</a></li>
+                        <li><a href="{%url 'about'%}">About Us </a></li>
+                        <li><a href="{%url 'contect'%}">Contact Us</a></li>
+                        <li><a href="{%url 'terms-conditions'%}">Terms & Conditions </a></li>
+                        <li><a href="{%url 'privacy-policy'%}">Privacy Policy</a></li>
                         <li><a href="javascript:void(0)">Cookies Policy</a></li>
-                        <li><a href="blog.php">News & Blogs</a></li>
-                        <li><a href="disclaimer.php">Disclaimer</a></li>
-                        <li><a href="refer-a-friend.php">Refer a friend</a></li>
-                        <li><a href="help-center.php">Help Center</a></li>
+                        <li><a href="{%url 'blog'%}">News & Blogs</a></li>
+                        <li><a href="{%url 'disclamer'%}">Disclaimer</a></li>
+                        <li><a href="{%url 'refer'%}">Refer a friend</a></li>
+                        <li><a href="{%url 'help-center'%}">Help Center</a></li>
 
                     </ul>
                 </div>
@@ -79,7 +79,7 @@
 </section>
 <div class="cover-copyright primary-bg py-2">
     <div class="container text-center">
-        <p>© Copyrights <a href="index.php" class="text-white"> RedCrude</a> 2022. Design and Developed by Device
+        <p>© Copyrights <a href="{%url 'index'%}" class="text-white"> RedCrude</a> 2022. Design and Developed by Device
             Doctor.</p>
     </div>
 </div>

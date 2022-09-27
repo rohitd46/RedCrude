@@ -1,0 +1,202 @@
+{% include 'include/header.html'%}
+{%load static%}
+<!--####################################
+                      Start banner section
+      ###########################################-->
+<section class="banner-v3 height-70vh d-flex align-items-center justify-content-center"
+    style="background-image: url({%static 'assets/images/banners/9.jpg'%});">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div class="text-center">
+                    <h1 class="text-white font-weight-600 mb-3"><span class="primary-text">RedCrude</span> Wallet </h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--####################################
+                      Start banner section
+      ###########################################-->
+
+<section class="padding-inline-0vw padding-inline-md-15vw">
+    <div class="container">
+        <form action="">
+            <h3 class="font-weight-500">SELECT YOUR COUNTRY</h3>
+            <div class="cover-wallet-form mt-4">
+
+                <div class="form-group">
+                    <label>Country <span class="text-danger">*</span></label>
+                    <select id="country">
+                        <option value="">Select</option>
+                        <option value="1">india</option>
+                        <option value="2">Aland Islands</option>
+                        <option value="3">Albania</option>
+                        <option value="4">Algeria</option>
+                        <option value="5">American Samoa</option>
+                        <option value="6">Andorra</option>
+                        <option value="7">Angola</option>
+                        <option value="8">Anguilla</option>
+                        <option value="9">Antarctica</option>
+                        <option value="10">Antigua and Barbuda</option>
+                        <option value="11">Argentina</option>
+                        <option value="12">Armenia</option>
+                        <option value="13">Aruba</option>
+                        <option value="14">Australia</option>
+                        <option value="15">Austria</option>
+                    </select>
+                    <span class="alert-error"></span>
+                </div>
+                <div class="form-group">
+                    <label>TYPE OF KYC <span class="text-danger">*</span></label>
+                    <!-- <select class="form-control">
+                            <option value="0">Individuals</option>
+                            <option value="0">Individuals2</option>
+                            <option value="0">Individuals3</option>
+                            <option value="0">Individuals4</option>
+                        </select>
+                        <span class="alert-error"></span> -->
+                    <div class="form-group">
+                        <div class="custom-select" style="width:100%;">
+                            <select>
+                                <option value="0">Individuals</option>
+                                <option value="1">Individuals 2</option>
+                                <option value="1">Individuals 3</option>
+                                <option value="1">Individuals 4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cover-wallet-card mt-5">
+                <div class="row align-items-center justify-content-center gx-0 gy-3">
+                    <div class="col-md-4">
+                        <div class="card border-radius-0px primary-bg-clr-01">
+                            <div class="card-body">
+                                <h2>01</h2>
+                                <h4>Without KYC</h4>
+                                <ul class="wallet-list-items darkmode-list-item">
+                                    <li><i class="material-icons">
+                                            done
+                                        </i> Deposit</li>
+                                    <li><i class="material-icons">
+                                            done
+                                        </i> Trade</li>
+                                    <li class="disabled"><i class="material-icons">
+                                            done
+                                        </i> withdrawal</li>
+                                    <li class="disabled"><i class="material-icons">
+                                            done
+                                        </i> P2P</li>
+                                </ul>
+                                <ul>
+                                    <li><a href="JavaScript:void(0)" class="primary-btn extra-btn-padding-40">Select</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-radius-0px primary-bg-clr-01" id="kyc-selected">
+                            <div class="card-body">
+                                <h2>02</h2>
+                                <h4>With KYC</h4>
+                                <ul class="wallet-list-items darkmode-list-item">
+                                    <li><i class="material-icons">
+                                            done
+                                        </i> Deposit</li>
+                                    <li><i class="material-icons">
+                                            done
+                                        </i> Trade</li>
+                                    <li><i class="material-icons">
+                                            done
+                                        </i> withdrawal</li>
+                                    <li><i class="material-icons">
+                                            done
+                                        </i> P2P</li>
+                                </ul>
+                                <ul>
+                                    <li><a href="javascript:void(0)" class="primary-btn extra-btn-padding-40"
+                                            id="kyc-selected-btn">Select</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cover-job-form pt-5">
+                <h3>PERSONAL INFORMATION</h3>
+                <div class="form-group">
+                    <label for="">FIRST NAME <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" placeholder="Enter your first name">
+                </div>
+                <div class="form-group">
+                    <label for="">MIDDLE NAME</label>
+                    <input type="text" class="form-control" placeholder="Enter your middle name">
+                </div>
+                <div class="form-group">
+                    <label for="">SELECT DATE OF BIRTH <span class="text-danger">*</span></label>
+                    <input type="date" class="form-control" placeholder="Enter your middle name">
+                </div>
+                <div class="form-group">
+                    <label for="">ENTER YOUR ADDRESS <span class="text-danger">*</span></label>
+                    <input type="address" class="form-control" placeholder="Enter your address">
+                </div>
+                <div class="form-group">
+                    <label for="">STATE <span class="text-danger">*</span></label>
+                    <div class="form-group">
+                        <div class="custom-select" style="width:100%;">
+                            <select>
+                                <option value="0">State</option>
+                                <option value="1">State 2</option>
+                                <option value="1">State 3</option>
+                                <option value="1">State 4</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">CITY <span class="text-danger">*</span></label>
+                    <div class="form-group">
+                        <div class="custom-select" style="width:100%;">
+                            <select>
+                                <option value="0">CITY </option>
+                                <option value="1">CITY 1</option>
+                                <option value="1">CITY 2</option>
+                                <option value="1">CITY 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">ZIP CODE <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" placeholder="Enter you pin/zip code">
+                </div>
+                <div class="form-group">
+                    <label for="check1" class="text-muted">
+                        <input type="checkbox" id="check1" class="form-check-input">
+                        I have read and agree to the Terms of Use as well as Privacy and Cookies Policy
+                    </label>
+                </div>
+                <br>
+                <br>
+                <div class="text-center">
+                    <button type="submit" class="primary-btn extra-btn-padding-30">Submit & Continue</button>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+</section>
+
+{% include 'include/footer.html' %} 
+<script>
+$("#country").select2({
+    placeholder: "Select Country",
+    allowClear: true
+});
+</script>

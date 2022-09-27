@@ -183,6 +183,18 @@ def Contect(request):
 def Blog(request):
     return render(request,'blog.html')
 
+def HelpCenter(request):
+    return render(request,'help-center.html')
+
+def Wallet(request):
+    return render(request,'wallet.html')
+
+def Disclamer(request):
+    return render(request,'disclamer.html')
+
+def Refer(request):
+    return render(request,'refer.html')
+
 def CreateCourse(request):
     return render(request,'dashboard/create-new-course.html')
 
@@ -208,7 +220,10 @@ def TeacherDetails(request):
     return render(request,'dashboard/teacher-details.html')
 
 def ExpertTrader(request):
-    return render(request,'dashboard/expert-trader.html')
+    return render(request,'dashboard/expert-trade.html')
 
 def TraderDetails(request):
     return render(request,'dashboard/teader-details.html')
+
+def ProfileUbdate(request):
+    return render(request,'dashboard/profile-setting.html')
