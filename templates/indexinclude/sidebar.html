@@ -50,7 +50,7 @@
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Main Menu</div>
 
-                            <a class="nav-link active" href="index.php">
+                            <a class="nav-link active" href="{%url 'Dashboard'%}">
                                 <div class="sb-nav-link-icon"><img src="{%static 'assetss/images/icons/dashboard.svg'%}" alt=""></div>
                                 Dashboard
                             </a>
@@ -63,7 +63,7 @@
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
 
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link" href="create-new-courses.php">
+                                    <a class="nav-link" href="{%url 'create-new-course'%}">
                                         <div class="sb-nav-link-icon"><img src="{%static 'assetss/images/icons/new-course.svg'%}" alt=""></div>
                                         New Course
                                         <!-- <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div> -->
@@ -78,23 +78,23 @@
                                 </nav>
                             </div>
 
-                            <a class="nav-link" href="explore-course.php">
+                            <a class="nav-link" href="{%url 'explore-course'%}">
                                 <div class="sb-nav-link-icon"><img src="{%static 'assetss/images/icons/Explore-Courses.svg'%}" alt="">
                                 </div>
                                 Explore Courses
 
                             </a>
-                            <a class="nav-link" href="my-learning.php">
+                            <a class="nav-link" href="{%url 'my-learning'%}">
                                 <div class="sb-nav-link-icon"><img src="{%static 'assetss/images/icons/My-Learning.svg'%}" alt="">
                                 </div>
                                 My Learning
                             </a>
-                            <a class="nav-link" href="expert-teacher.php">
+                            <a class="nav-link" href="{%url 'expert-teacher'%}">
                                 <div class="sb-nav-link-icon"><img src="{%static 'assetss/images/icons/Expert-Teachers.svg'%}" alt="">
                                 </div>
                                 Expert Teachers
                             </a>
-                            <a class="nav-link" href="expert-trade.php">
+                            <a class="nav-link" href="{%url 'expert-trader'%}">
                                 <div class="sb-nav-link-icon"><img src="{%static 'assetss/images/icons/Expert-Traders.svg'%}" alt="">
                                 </div>
                                 Expert Traders

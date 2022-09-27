@@ -2,7 +2,14 @@
 </main>
 </div>
 </div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+  
+  {% for msg in messages%}
+  swal('{{msg}}');
+  {% endfor %}
 
+</script>
 <!-- end side bar -->
 
 <!-- bootstrap js file -->

@@ -1,19 +1,20 @@
 {% include 'include/header.html'%}
 {%load static%}
+
 <!--####################################
                       Start Hero section
       ###########################################-->
-<section class="bg-hero d-flex align-items-center">
+<section class="bg-hero d-flex align-items-center"  style="background-image: url({%static 'assets/images/hero-bg.jpg'%})">
     <div class="container ">
         <div class="row">
             <div class="col-md-6">
                 <div class="cover-content cover-content pt-3">
                     <div class="mb-3">
-                        <h1 class="text-black font-weight-400 fst-italic"><span class="font-weight-600">Secure</span>
+                        <h1 class="text-white font-weight-400 fst-italic"><span class="font-weight-600">Secure</span>
                             and <span class="font-weight-600">Easy</span>
                             Way <br> To <span class="font-weight-600">Trades</span></h1>
                     </div>
-                    <p class="text-black">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    <p c>Lorem Ipsum is simply dummy text of the printing and typesetting
                         industry. Lorem Ipsum has
                         been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
                         galley of type and scrambled it to make a type specimen book.</p>
@@ -2172,10 +2173,12 @@
     </div>
 </section>
 
+
 <!--##################################
         end fa section
   ##############################-->
 {% include 'include/footer.html' %} 
+
 
 <script>
 var swiper = new Swiper(".mySwiper", {

@@ -8,6 +8,7 @@ import uuid
 from django.conf import settings
 from django.core.mail import send_mail
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 def INDEX(request):
     return render(request,'index.html')
@@ -24,16 +25,22 @@ def LOGIN(request):
             login(request,user)
             user_type=user.user_type
             if user_type=='admin':
+                messages.info(request,"Welcome to RedCrede.")
                 return redirect ("Dashboard")
             elif user_type=='teacher':
+                 messages.info(request,"Welcome to RedCrede.")
                  return redirect ("Dashboard")
             elif user_type=='trader':
+                 messages.info(request,"Welcome to RedCrede.")
                  return redirect ("Dashboard")
             elif user_type=='user':
+                 messages.info(request,"Welcome to RedCrede.")
                  return redirect ("Dashboard")
             else:
+                messages.info(request,"Invalid User")
                 return redirect('login')
         else:
+            messages.info(request,"Invalid Username/Password")
             return redirect('login')
     return render(request,'login.html')
 
@@ -45,6 +52,7 @@ def SIGNUPUSER(request):
           password=request.POST.get('password')  
           
           if CustomUser.objects.filter(email=email).exists():
+              messages.info(request,"USer Already Exixts.")
               return redirect('signupuser')
           else:
               user=CustomUser(first_name=first_name,username=first_name,email=email,user_type='user')
@@ -56,6 +64,7 @@ def SIGNUPUSER(request):
             #   profile_obj=Profile.objects.create(user=user,auth_token=auth_token)
             #   profile_obj.save()
             #   verify_send_email(email,auth_token)
+              messages.info(request,"Account Create Scussecfully.")
               return redirect('login')
           
       return render(request,'signupuser.html')
@@ -68,6 +77,7 @@ def SIGNUPTEACHER(request):
           password=request.POST.get('password')  
           
           if CustomUser.objects.filter(email=email).exists():
+              messages.info(request,"USer Already Exixts.")
               return redirect('signupuser')
           else:
               user=CustomUser(first_name=first_name,username=first_name,email=email,user_type='teacher')
@@ -79,6 +89,7 @@ def SIGNUPTEACHER(request):
             #   profile_obj=Profile.objects.create(user=user,auth_token=auth_token)
             #   profile_obj.save()
             #   verify_send_email(email,auth_token)
+              messages.info(request,"Account Create Scussecfully.")
               return redirect('login')
     return render(request,'signupteacher.html')
 
@@ -90,6 +101,7 @@ def SIGNUPTRADER(request):
           password=request.POST.get('password')  
           
           if CustomUser.objects.filter(email=email).exists():
+              messages.info(request,"USer Already Exixts.")
               return redirect('signupuser')
           else:
               user=CustomUser(first_name=first_name,username=first_name,email=email,user_type='trader')
@@ -101,6 +113,7 @@ def SIGNUPTRADER(request):
             #   profile_obj=Profile.objects.create(user=user,auth_token=auth_token)
             #   profile_obj.save()
             #   verify_send_email(email,auth_token)
+              messages.info(request,"Account Create Scussecfully.")
               return redirect('login')
     return render(request,'signuptrader.html')
 
@@ -136,6 +149,7 @@ def ForgetPassword(request):
 
 @login_required(login_url='login')    
 def USERDASHBOARD(request):
+    
     return render (request,'userindex.html')
 
 def Logout(request):
@@ -168,3 +182,33 @@ def Contect(request):
 
 def Blog(request):
     return render(request,'blog.html')
+
+def CreateCourse(request):
+    return render(request,'dashboard/create-new-course.html')
+
+def CourseDetails(request):
+    return render(request,'dashboard/course-details.html')
+
+def ExploreCourse(request):
+    return render(request,'dashboard/explore-course.html')
+
+def MyLearning(request):
+    return render(request,'dashboard/my-learning.html')
+
+def LearningDetails(request):
+    return render(request,'dashboard/learning-details.html')
+
+def LearningDetails2(request):
+    return render(request,'dashboard/learning-details2.html')
+
+def ExpertTeacher(request):
+    return render(request,'dashboard/expert-teacher.html')
+
+def TeacherDetails(request):
+    return render(request,'dashboard/teacher-details.html')
+
+def ExpertTrader(request):
+    return render(request,'dashboard/expert-trader.html')
+
+def TraderDetails(request):
+    return render(request,'dashboard/teader-details.html')

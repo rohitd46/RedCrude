@@ -26,4 +26,15 @@ urlpatterns = [
     path('freatue-business', views.Freatue,name='freatue-business'),
     path('contect', views.Contect,name='contect'),
     path('blog', views.Blog,name='blog'),
+    path('create-new-course', views.CreateCourse,name='create-new-course'),
+    path('course-details', views.CourseDetails,name='course-details'),
+    path('my-learning', views.MyLearning,name='my-learning'),
+    path('explore-course', views.ExploreCourse,name='explore-course'),
+    path('learning-details', views.LearningDetails,name='learning-details'),
+    path('learning-details2', views.LearningDetails2,name='learning-details2'),
+    path('expert-teacher', views.ExpertTeacher,name='expert-teacher'),
+    path('teacher-details', views.TeacherDetails,name='teacher-details'),
+    path('expert-trader', views.ExpertTrader,name='expert-trader'),
+    path('trader-details', views.TraderDetails,name='trader-details'),
+    
 ]

@@ -1,0 +1,345 @@
+{%include 'indexinclude/sidebar.html'%}
+{% include 'indexinclude/topnav.html'%}
+{%load static%}
+
+<div class="cover-all-content">
+    <div class="page-title d-flex align-items-center justify-content-between flex-wrap">
+        <h2>Create New Course</h2>
+        <ul class="d-flex align-items-center gap-2">
+            <li><a href="#" class="primary-outline-btn">Save as draft</a></li>
+            <li><a href="#" onclick="goBack();" class="white-btn left-icon font-weight-500"><i class="material-icons">
+                        west
+                    </i> Go Back</a></li>
+        </ul>
+    </div>
+    <div class="cover-inner-content">
+        <div class="cover-inner-content">
+            <div class="card">
+                <div class="tabs-style-1">
+                    <!-- Nav tabs -->
+                    <div class="tabs-links">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="tabv1-1-tab" data-bs-toggle="tab"
+                                    data-bs-target="#tabv1-1" type="button" role="tab" aria-controls="tabv1-1"
+                                    aria-selected="true">Basic Information</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tabv1-2-tab" data-bs-toggle="tab" data-bs-target="#tabv1-2"
+                                    type="button" role="tab" aria-controls="tabv1-2" aria-selected="false">Upload
+                                    Lecture</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tabv1-3-tab" data-bs-toggle="tab" data-bs-target="#tabv1-3"
+                                    type="button" role="tab" aria-controls="tabv1-3" aria-selected="false">Course
+                                    Image</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tabv1-4-tab" data-bs-toggle="tab" data-bs-target="#tabv1-4"
+                                    type="button" role="tab" aria-controls="tabv1-4" aria-selected="false">Publish
+                                    Course</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tabv1-1" role="tabpanel" aria-labelledby="tabv1-1-tab">
+                            <h4 class="font-weight-500 mb-0">Title & Description
+                            </h4>
+                            <div class="hb-line"></div>
+                            <br>
+                            <div class="cover-form">
+                                <form action="#">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="">Course Title</label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="Enter Course Title">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="">Category</label>
+                                                <div class="custom-select" style="width:100%;">
+                                                    <select>
+                                                        <option value="0">Select Category</option>
+                                                        <option value="1">Standerd</option>
+                                                        <option value="1">Pro</option>
+                                                        <option value="1">Plus</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label for="">Description</label>
+                                            <div id="editor"></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-pane " id="tabv1-2" role="tabpanel" aria-labelledby="tabv1-2-tab">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <h4 class="font-weight-500 mb-0">Cirrculum
+                                    </h4>
+                                    <div class="hb-line"></div>
+                                </div>
+                                <ul>
+                                    <li><a href="#" class="primary-btn light-gray-btn2"><i class="material-icons">
+                                                add
+                                            </i> Add New Lecture</a></li>
+                                </ul>
+                            </div>
+                            <br>
+                            <div class="according-style-1">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#according-st-1-1" aria-expanded="true"
+                                                aria-controls="collapseOne">
+                                                <div>
+                                                    <span class="font-weight-600">Lecture: 1</span>
+                                                    Introduction about stock candles <i class="material-icons">
+                                                        mode_edit
+                                                    </i>
+                                                </div>
+                                                <div>
+                                                    <a href="#" class="primary-anchor tash-icon"> <i
+                                                            class="material-icons">
+                                                            delete_sweep
+                                                        </i></a>
+                                                </div>
+                                            </button>
+                                        </h2>
+                                        <div id="according-st-1-1" class="accordion-collapse collapse show"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
+                                            <div class="accordion-body">
+                                                <div class="tabs-style-1">
+                                                    <div class="tabs-links">
+                                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                            <li class="nav-item" role="presentation">
+                                                                <button class="nav-link active" id="tabv2-1-tab"
+                                                                    data-bs-toggle="tab" data-bs-target="#tabv2-1"
+                                                                    type="button" role="tab" aria-controls="tabv2-1"
+                                                                    aria-selected="true">Description</button>
+                                                            </li>
+                                                            <li class="nav-item" role="presentation">
+                                                                <button class="nav-link" id="tabv2-2-tab"
+                                                                    data-bs-toggle="tab" data-bs-target="#tabv2-2"
+                                                                    type="button" role="tab" aria-controls="tabv2-2"
+                                                                    aria-selected="false">Video</button>
+                                                            </li>
+                                                            <li class="nav-item" role="presentation">
+                                                                <button class="nav-link" id="tabv2-3-tab"
+                                                                    data-bs-toggle="tab" data-bs-target="#tabv2-3"
+                                                                    type="button" role="tab" aria-controls="tabv2-3"
+                                                                    aria-selected="false">Resources</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="tab-content mt-0">
+                                                        <div class="tab-pane active" id="tabv2-1" role="tabpanel"
+                                                            aria-labelledby="tabv2-1-tab">
+                                                            <div id="editor2"></div>
+                                                        </div>
+                                                        <div class="tab-pane " id="tabv2-2" role="tabpanel"
+                                                            aria-labelledby="tabv2-2-tab">
+                                                            <div class="upload-video-show">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div
+                                                                            class="d-flex align-items-center justify-content-between">
+                                                                            <div class="d-flex align-items-start gap-2">
+                                                                                <i class="material-icons">
+                                                                                    play_circle_outline
+                                                                                </i>
+                                                                                <div>
+                                                                                    <h6 class="m-0">Final Review.mp4
+                                                                                    </h6>
+                                                                                    <p class="text-muted">389 MB</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <ul>
+                                                                                <li><a href="#"
+                                                                                        class="primary-anchor"><i
+                                                                                            class="material-icons">
+                                                                                            delete_outline
+                                                                                        </i></a></li>
+
+                                                                            </ul>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div
+                                                                            class="d-flex align-items-center justify-content-between">
+                                                                            <div class="d-flex align-items-start gap-2">
+                                                                                <i class="material-icons">
+                                                                                    play_circle_outline
+                                                                                </i>
+                                                                                <div>
+                                                                                    <h6 class="m-0">Final Review.mp4
+                                                                                    </h6>
+                                                                                    <p class="text-muted">389 MB</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <ul>
+                                                                                <li><a href="#"
+                                                                                        class="primary-anchor"><i
+                                                                                            class="material-icons">
+                                                                                            delete_outline
+                                                                                        </i></a></li>
+
+                                                                            </ul>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div
+                                                                class="height-300px d-flex align-items-center justify-content-center border-bottom">
+                                                                <ul class="text-center">
+                                                                    <li><a href="#"
+                                                                            class="primary-btn light-gray-btn2"><i
+                                                                                class="material-icons">
+                                                                                add
+                                                                            </i> Upload Video</a></li>
+                                                                    <li class="mt-4"><span
+                                                                            class="font-weight-500 ">Note:</span> Video
+                                                                        size should be less than 500 mb</li>
+                                                                </ul>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="tab-pane" id="tabv2-3" role="tabpanel"
+                                                            aria-labelledby="tabv2-3-tab">
+                                                            <div class="upload-video-show">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div
+                                                                            class="d-flex align-items-center justify-content-between">
+                                                                            <div class="d-flex align-items-start gap-2">
+                                                                                <img src="{%static 'assetss/images/icons/description.svg'%}"
+                                                                                    alt="">
+                                                                                <div>
+                                                                                    <h6 class="m-0">guide.pdf
+                                                                                    </h6>
+                                                                                    <p class="text-muted">233 kb</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <ul>
+                                                                                <li><a href="#"
+                                                                                        class="primary-anchor"><i
+                                                                                            class="material-icons">
+                                                                                            delete_outline
+                                                                                        </i></a></li>
+
+                                                                            </ul>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div
+                                                                            class="d-flex align-items-center justify-content-between">
+                                                                            <div class="d-flex align-items-start gap-2">
+                                                                                <img src="{%static 'assetss/images/icons/description.svg'%}"
+                                                                                    alt="">
+                                                                                <div>
+                                                                                    <h6 class="m-0">Final Review.mp4
+                                                                                    </h6>
+                                                                                    <p class="text-muted">389 MB</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <ul>
+                                                                                <li><a href="#"
+                                                                                        class="primary-anchor"><i
+                                                                                            class="material-icons">
+                                                                                            delete_outline
+                                                                                        </i></a></li>
+
+                                                                            </ul>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div
+                                                                class="height-300px d-flex align-items-center justify-content-center border-bottom">
+                                                                <ul class="text-center">
+                                                                    <li><a href="#"
+                                                                            class="primary-btn light-gray-btn2"><i
+                                                                                class="material-icons">
+                                                                                add
+                                                                            </i> Upload Resource</a></li>
+                                                                    <li class="mt-4"><span
+                                                                            class="font-weight-500 ">Note:</span> Note:
+                                                                        Only PDF and Word file supported.</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-end mt-4">
+                                                            <ul>
+                                                                <li><a href="#"
+                                                                        class="primary-btn extra-btn-padding-30">Save</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="tab-pane" id="tabv1-3" role="tabpanel" aria-labelledby="tabv1-3-tab">
+                            <div>
+                                <h4 class="font-weight-500 mb-0">Upload Course Image
+                                </h4>
+                                <div class="hb-line"></div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tabv1-4" role="tabpanel" aria-labelledby="tabv1-4-tab">
+                            <div>
+                                <h4 class="font-weight-500 mb-0">Publish Course
+                                </h4>
+                                <div class="hb-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    {%include 'indexinclude/footer.html'%}
+    <script>
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+
+        })
+
+        .then(editor => {
+            window.editor = editor;
+        })
+        .catch(err => {
+            console.error(err.stack);
+        });
+    </script>
+    <script>
+    ClassicEditor
+        .create(document.querySelector('#editor2'), {
+
+        })
+
+        .then(editor => {
+            window.editor = editor;
+        })
+        .catch(err => {
+            console.error(err.stack);
+        });
+    </script>

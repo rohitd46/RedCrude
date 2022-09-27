@@ -30,7 +30,7 @@
     <div class="signup">
         <div class="right-box d-flex align-items-center order-1 order-md-0">
             <div>
-                <a href="index.php"><img src="{%static 'assets/images/logo/logo-black.png'%}" alt="image here" class="w-auto mb-4"></a>
+                <a href="{%url 'index'%}"><img src="{%static 'assets/images/logo/logo-black.png'%}" alt="image here" class="w-auto mb-4"></a>
                 <h3>Redcrude Account Login</h3>
                 <p>Enter your valid Email and Password</p>
                 <form action="{%url 'login'%}" class="mt-4" method="POST">
@@ -98,12 +98,21 @@
         </div>
 
     </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+      
+      {% for msg in messages%}
+      swal('{{msg}}');
+      {% endfor %}
+   
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js">
     </script>
+  
 
 </body>
 
